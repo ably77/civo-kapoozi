@@ -98,15 +98,15 @@ spec:
         #  httpGet:
         #    path: /healthy
         #    port: 8080
-          initialDelaySeconds: 120
-          periodSeconds: 5
-          timeoutSeconds: 10
-        startupProbe:
-          httpGet:
-            path: /healthy
-            port: 8080
-          failureThreshold: 30
-          periodSeconds: 10
+        #  initialDelaySeconds: 120
+        #  periodSeconds: 5
+        #  timeoutSeconds: 10
+        #startupProbe:
+        #  httpGet:
+        #    path: /healthy
+        #    port: 8080
+        #  failureThreshold: 30
+        #  periodSeconds: 10
       volumes:
       - name: publickey
         secret:

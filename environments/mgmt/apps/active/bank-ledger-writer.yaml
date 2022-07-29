@@ -89,8 +89,8 @@ spec:
         #  httpGet:
         #    path: /ready
         #    port: 8080
-          failureThreshold: 30
-          periodSeconds: 10
+        # failureThreshold: 30
+        # periodSeconds: 10
       volumes:
       - name: publickey
         secret:
