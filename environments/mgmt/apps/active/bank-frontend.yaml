@@ -129,6 +129,9 @@ spec:
   selector:
     app: frontend
   ports:
+  - name: http
+    port: 80
+    targetPort: 8080
   - name: https
     port: 443
     targetPort: 8080
