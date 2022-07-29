@@ -1,0 +1,46 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gm-enterprise-agent-mgmt
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: gloo-mesh
+  source:
+    repoURL: 'https://storage.googleapis.com/gloo-mesh-enterprise/gloo-mesh-agent'
+    targetRevision: 2.0.9
+    chart: gloo-mesh-agent
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: cluster
+          value: 'mgmt'
+        - name: relay.serverAddress
+          value: 'gloo-mesh-mgmt-server.gloo-mesh.svc.cluster.local:9900'
+        - name: relay.authority
+          value: 'gloo-mesh-mgmt-server.gloo-mesh'
+        - name: relay.clientTlsSecret.name
+          value: 'gloo-mesh-agent-mgmt-tls-cert'
+        - name: relay.clientTlsSecret.namespace
+          value: 'gloo-mesh'
+        - name: relay.rootTlsSecret.name
+          value: 'relay-root-tls-secret'
+        - name: relay.rootTlsSecret.namespace
+          value: 'gloo-mesh'
+        - name: rate-limiter.enabled
+          value: 'false'
+        - name: ext-auth-service.enabled
+          value: 'false'
+        # enabled for future vault integration
+        - name: istiodSidecar.createRoleBinding
+          value: 'true'
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+    - Replace=true
+    - ApplyOutOfSyncOnly=true
+  project: default

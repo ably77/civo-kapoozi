@@ -1,0 +1,21 @@
+apiVersion: admin.gloo.solo.io/v2
+kind: WorkspaceSettings
+metadata:
+  name: gateways
+  namespace: istio-gateways
+spec:
+  exportTo:
+  - resources:
+    - kind: SERVICE
+    workspaces:
+    - selector:
+        allow_ingress: "true"
+  importFrom:
+  - resources:
+    - kind: SERVICE
+    - kind: ALL
+      labels:
+        expose: "true"
+    workspaces:
+    - selector:
+        allow_ingress: "true"

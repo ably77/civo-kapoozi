@@ -1,0 +1,62 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gloo-mesh-enterprise-helm
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: gloo-mesh
+  project: default
+  source:
+    chart: gloo-mesh-enterprise
+    helm:
+      values: |
+        licenseKey: eyJleHAiOjE2NjE5MDI0NjAsImlhdCI6MTY1ODk2NDg2MCwiayI6Ikt3Z3pCUSIsImx0IjoidHJpYWwiLCJwcm9kdWN0IjoiZ2xvbyJ9.CWe1JmPIDkq9QYQ-MkD2qm9SIpysg4mI2nGUkuidGOM
+        mgmtClusterName: mgmt
+        glooMeshMgmtServer:
+          serviceType: ClusterIP
+          relay:
+            disableCa: true
+            disableCaCertGeneration: true
+            tlsSecret:
+              name: relay-server-tls-secret
+          ports:
+            healthcheck: 8091
+        glooMeshUi:
+          serviceType: ClusterIP
+          enabled: true
+          auth:
+            enabled: true
+            backend: oidc
+            oidc: 
+              # From the OIDC provider
+              clientId: "967359009029-ho41c483elb0m80p2arb11pgubp85vbv.apps.googleusercontent.com"
+              # From the OIDC provider. To be base64 encoded and stored as a kubernetes secret.
+              clientSecret: "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"
+              # Name for generated secret
+              clientSecretName: dashboard
+              # The issuer URL from the OIDC provider, usually something like 'https://<domain>.<provider_url>/'.
+              issuerUrl: https://accounts.google.com
+              # The URL that the UI for the OIDC app is available at, from the DNS and other ingress settings that expose the OIDC app UI service.
+              appUrl: "https://gmui.kapoozi.com"
+          deploymentOverrides:
+            spec:
+              template:
+                metadata:
+                  annotations:
+                    sidecar.istio.io/inject: "true"
+                  labels:
+                    istio.io/rev: "1-13"
+    repoURL: https://storage.googleapis.com/gloo-mesh-enterprise/gloo-mesh-enterprise
+    targetRevision: 2.0.9
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+  # ignore the self-signed certs that are being generated automatically    
+  ignoreDifferences:
+  - group: v1
+    kind: Secret
