@@ -26,6 +26,6 @@ spec:
             name: frontend
             namespace: bank-demo
           port:
-            number: 80
+            number: 443
       labels:
         waf: "true"
