@@ -66,13 +66,13 @@ spec:
             name: environment-config
         - configMapRef:
             name: accounts-db-config
-        readinessProbe:
-          httpGet:
-            path: /ready
-            port: 8080
-          initialDelaySeconds: 10
-          periodSeconds: 5
-          timeoutSeconds: 10
+        #readinessProbe:
+        #  httpGet:
+        #    path: /ready
+        #    port: 8080
+        #  initialDelaySeconds: 10
+        #  periodSeconds: 5
+        #  timeoutSeconds: 10
         resources:
           requests:
             cpu: 200m
