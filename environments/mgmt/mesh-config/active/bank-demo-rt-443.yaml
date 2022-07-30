@@ -15,11 +15,36 @@ spec:
   workloadSelectors: []
   http:
     - name: bank-demo
+      # set matchers to closely match https://github.com/GoogleCloudPlatform/bank-of-anthos/tree/main/src/frontend
       matchers:
       - uri:
-          prefix: /
+          exact: /
+        method: GET 
       - uri:
-          prefix: /home
+          prefix: /static
+      - uri:
+          exact: /deposit
+        method: POST
+      - uri:
+          exact: /home
+        method: GET
+      - uri:
+          exact: /login
+      - uri:
+          prefix: /logout
+        #method: POST
+      - uri:
+          exact: /payment
+        method: POST
+      - uri:
+          exact: /ready
+        method: GET
+      - uri:
+          exact: /signup
+        #method: GET, POST
+      - uri:
+          exact: /version
+        method: GET
       forwardTo:
         destinations:
         - ref:
