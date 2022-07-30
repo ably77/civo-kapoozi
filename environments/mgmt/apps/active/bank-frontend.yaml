@@ -34,6 +34,8 @@ spec:
     metadata:
       labels:
         app: frontend
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       serviceAccountName: frontend
       terminationGracePeriodSeconds: 5

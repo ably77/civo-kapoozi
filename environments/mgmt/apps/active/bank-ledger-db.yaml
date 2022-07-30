@@ -36,6 +36,8 @@ spec:
     metadata:
       labels:
         app: ledger-db
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       serviceAccountName: ledger-db
       containers:

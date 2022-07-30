@@ -41,6 +41,8 @@ spec:
       labels:
         app: accounts-db
         tier: db
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       serviceAccountName: accounts-db
       containers:

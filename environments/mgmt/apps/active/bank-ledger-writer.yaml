@@ -34,6 +34,8 @@ spec:
     metadata:
       labels:
         app: ledgerwriter
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       serviceAccountName: ledgerwriter
       terminationGracePeriodSeconds: 5
