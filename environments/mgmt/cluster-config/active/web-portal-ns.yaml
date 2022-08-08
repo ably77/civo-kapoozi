@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: web-portal
+  labels:
+    istio.io/rev: 1-13
+---
