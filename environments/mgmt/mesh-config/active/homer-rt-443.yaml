@@ -7,8 +7,7 @@ metadata:
   namespace: web-portal
 spec:
   hosts:
-  - 'homer.glootest.com'
-  - 'homer-local.glootest.com'
+  - 'homer.kapoozi.com'
   http:
   - forwardTo:
       destinations:
