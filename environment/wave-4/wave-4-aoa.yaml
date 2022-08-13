@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: meta-mgmt-infra
+  name: wave-4-aoa
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/ably77/civo-kapoozi/
     targetRevision: HEAD
-    path: environments/mgmt/infra/active/
+    path: environment/wave-4/active/
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
