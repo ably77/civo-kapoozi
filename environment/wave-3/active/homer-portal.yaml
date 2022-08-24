@@ -164,19 +164,19 @@ spec:
                 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
                 services:
                   - name: "Admin Applications"
-                    icon: "far fa-user-cog"
+                    icon: "fas fa-user-cog"
                     items:
                       - name: "ArgoCD - mgmt"
                         #subtitle: "GitOps Tooling"
                         icon: "fab fa-git-alt"
-                        tag: "app"
+                        tag: "argo"
                         keywords: "argocd"
                         url: "https://argocd.kapoozi.com/argo"
                         target: "_blank" # optional html a tag target attribute
                       - name: "ArgoCD - cluster1"
                         #subtitle: "GitOps Tooling"
                         icon: "fab fa-git-alt"
-                        tag: "app"
+                        tag: "argo"
                         keywords: "argocd"
                         url: "https://argocd-cluster1.kapoozi.com/argo"
                         target: "_blank" # optional html a tag target attribute
@@ -188,8 +188,8 @@ spec:
                         target: "_blank" # optional html a tag target attribute
                       - name: "Grafana"
                         #subtitle: "Another application"
-                        icon: "fab fa-chart-area"
-                        tag: "gmui"
+                        icon: "fas fa-chart-area"
+                        tag: "grafana"
                         url: "https://grafana.kapoozi.com/grafana"
                         target: "_blank" # optional html a tag target attribute
                   
@@ -198,37 +198,37 @@ spec:
                     items:
                       - name: "httpbin"
                         #subtitle: "httpbin"
-                        icon: "fab fa-browser"
+                        icon: "far fa-window-maximize"
                         tag: "httpbin"
                         keywords: "httpbin"
                         url: "https://httpbin.kapoozi.com/get"
                         target: "_blank" # optional html a tag target attribute
                       - name: "bookinfo"
                         #subtitle: "bookinfo"
-                        icon: "fab fa-books"
+                        icon: "fas fa-book-reader"
                         tag: "bookinfo"
                         url: "https://bookinfo.kapoozi.com/productpage"
                         target: "_blank" # optional html a tag target attribute
                       - name: "Solo Wallet"
                         #subtitle: "solowallet"
-                        icon: "fad fa-wallet"
+                        icon: "fas fa-wallet"
                         tag: "solowallet"
                         url: "https://bank.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
                   
                   - name: "Collaboration Tools"
-                    icon: "far fa-users"
+                    icon: "fas fa-users"
                     items:
                       - name: "ghost-blog"
                         #subtitle: "ghost-blog"
-                        icon: "far fa-ghost"
+                        icon: "fas fa-ghost"
                         tag: "ghost-blog"
                         keywords: "ghost-blog"
                         url: "https://ghost.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
                       - name: "plants-blog"
                         #subtitle: "plants-blog"
-                        icon: "far fa-ghost"
+                        icon: "fas fa-seedling"
                         tag: "plants-blog"
                         url: "https://plants.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
@@ -240,13 +240,13 @@ spec:
                         target: "_blank" # optional html a tag target attribute
                       - name: "etherpad"
                         #subtitle: "etherpad"
-                        icon: "fad fa-edit"
+                        icon: "fas fa-i-cursor"
                         tag: "etherpad"
                         url: "https://etherpad.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
                       - name: "etherdraw"
                         #subtitle: "etherdraw"
-                        icon: "far fa-palette"
+                        icon: "fas fa-palette"
                         tag: "etherdraw"
                         url: "https://etherdraw.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute            
