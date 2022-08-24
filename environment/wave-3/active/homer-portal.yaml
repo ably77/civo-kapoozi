@@ -166,12 +166,19 @@ spec:
                   - name: "Admin Applications"
                     icon: "fas fa-cloud"
                     items:
-                      - name: "ArgoCD"
+                      - name: "ArgoCD - mgmt"
                         logo: "assets/tools/sample.png"
                         #subtitle: "GitOps Tooling"
                         tag: "app"
                         keywords: "argocd"
                         url: "https://argocd.kapoozi.com/argo"
+                        target: "_blank" # optional html a tag target attribute
+                      - name: "ArgoCD - cluster1"
+                        logo: "assets/tools/sample.png"
+                        #subtitle: "GitOps Tooling"
+                        tag: "app"
+                        keywords: "argocd"
+                        url: "https://argocd-cluster1.kapoozi.com/argo"
                         target: "_blank" # optional html a tag target attribute
                       - name: "Gloo Mesh UI"
                         logo: "assets/tools/sample2.png"
