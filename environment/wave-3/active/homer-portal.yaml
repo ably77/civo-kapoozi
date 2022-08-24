@@ -167,8 +167,9 @@ spec:
                     icon: "fas fa-cloud"
                     items:
                       - name: "ArgoCD - mgmt"
-                        logo: "assets/tools/sample.png"
+                        #logo: "assets/tools/sample.png"
                         #subtitle: "GitOps Tooling"
+                        icon: "fab fa-git-alt"
                         tag: "app"
                         keywords: "argocd"
                         url: "https://argocd.kapoozi.com/argo"
