@@ -13,3 +13,7 @@ spec:
       cluster: mgmt
       labels:
         istio: ingressgateway
+  - selector:
+      cluster: cluster1
+      labels:
+        istio: ingressgateway

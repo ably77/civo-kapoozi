@@ -10,3 +10,6 @@ spec:
   - name: mgmt
     namespaces:
     - name: httpbin
+  - name: cluster1
+    namespaces:
+    - name: httpbin

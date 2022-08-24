@@ -11,3 +11,7 @@ spec:
     namespaces:
     - name: bookinfo-frontends
     - name: bookinfo-backends
+  - name: cluster1
+    namespaces:
+    - name: bookinfo-frontends
+    - name: bookinfo-backends
