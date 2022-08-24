@@ -19,7 +19,7 @@ spec:
           namespace: argocd
     labels:
       waf: "true"
-      argocd-oauth: "true"
+      #argocd-oauth: "true"
     name: argocd
     matchers:
       - uri:
