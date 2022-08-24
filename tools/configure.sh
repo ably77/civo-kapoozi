@@ -6,5 +6,5 @@ environment_waves="4"
 
 # configure
 for i in $(seq ${environment_waves}); do 
-  kubectl apply -f environment/wave-${i}/wave-${i}-aoa.yaml;
+  kubectl apply -f ../environment/wave-${i}/wave-${i}-aoa.yaml;
 done
