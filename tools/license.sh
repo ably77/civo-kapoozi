@@ -7,8 +7,6 @@
 # please use `kubectl config rename-contexts <current_context> <target_context>` to
 # rename your context if necessary
 cluster_context="mgmt"
-# number of app waves in the environments directory
-environment_waves="4"
 
 
 # check to see if defined contexts exist
@@ -52,36 +50,3 @@ metadata:
   namespace: gloo-mesh
 type: Opaque
 EOF
-
-# install argocd
-cd bootstrap-argocd
-./install-argocd.sh insecure-rootpath ${cluster_context}
-cd ..
-
-# wait for argo cluster rollout
-./tools/wait-for-rollout.sh deployment argocd-server argocd 20 ${cluster_context}
-
-# deploy app of app waves
-for i in $(seq ${environment_waves}); do 
-  #echo $i;
-  kubectl apply -f environment/wave-${i}/wave-${i}-aoa.yaml --context ${cluster_context};
-  #TODO: add test script if statement
-  sleep 20; 
-done
-
-# wait for completion of gloo-mesh install
-./tools/wait-for-rollout.sh deployment gloo-mesh-mgmt-server gloo-mesh 10 ${cluster_context}
-
-# echo port-forward commands
-echo
-echo "access gloo mesh dashboard:"
-echo "kubectl port-forward -n gloo-mesh svc/gloo-mesh-ui 8090 --context ${cluster_context}"
-echo 
-echo "access argocd dashboard:"
-echo "kubectl port-forward svc/argocd-server -n argocd 9999:443 --context ${cluster_context}"
-echo
-echo "navigate to http://localhost:8090 in your browser for the Gloo Mesh UI"
-echo "navigate to http://localhost:9999/argo in your browser for argocd"
-echo
-echo "username: admin"
-echo "password: solo.io"
