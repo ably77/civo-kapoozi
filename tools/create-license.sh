@@ -6,17 +6,9 @@
 #
 # please use `kubectl config rename-contexts <current_context> <target_context>` to
 # rename your context if necessary
-cluster_context="mgmt"
+LICENSE_KEY=${1:-""}
+cluster_context=${2:-mgmt}
 
-
-# check to see if defined contexts exist
-if [[ $(kubectl config get-contexts | grep ${cluster_context}) == "" ]] ; then
-  echo "Check Failed: ${cluster_context} context does not exist. Please check to see if you have the clusters available"
-  echo "Run 'kubectl config get-contexts' to see currently available contexts. If the clusters are available, please make sure that they are named correctly. Default is ${cluster_context}"
-  exit 1;
-fi
-
-LICENSE_KEY="$1"
 # check to see if license key variable was passed through, if not prompt for key
 if [[ ${LICENSE_KEY} == "" ]]
   then

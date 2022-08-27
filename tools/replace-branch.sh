@@ -3,7 +3,7 @@
 current_branch=''$1''
 target_branch=''$2''
 # number of app waves in the environments directory
-environment_waves="4"
+environment_waves="$(ls ../environment | wc -l)"
 
 # check to see if current branch variable was passed through, if not prompt for it
 if [[ ${current_branch} == "" ]]
