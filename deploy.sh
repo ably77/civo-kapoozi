@@ -8,6 +8,7 @@
 # rename your context if necessary
 LICENSE_KEY=${1:-""}
 cluster_context=${2:-mgmt}
+environment_overlay=${3:-prod} # prod, qa, dev
 
 # check to see if defined contexts exist
 if [[ $(kubectl config get-contexts | grep ${cluster_context}) == "" ]] ; then
@@ -31,11 +32,11 @@ cd ..
 for i in $(seq $(ls environment | wc -l)); do 
   echo "starting wave-${i}"
   # run init script if it exists
-  [[ -f "environment/wave-${i}/init.sh" ]] && ./environment/wave-${i}/init.sh
+  [[ -f "environment/wave-${i}/${environment_overlay}/init.sh" ]] && ./environment/wave-${i}/${environment_overlay}/init.sh
   # deploy aoa wave
-  kubectl apply -f environment/wave-${i}/wave-${i}-aoa.yaml --context ${cluster_context};
+  kubectl apply -f environment/wave-${i}/${environment_overlay}/wave-${i}-aoa.yaml --context ${cluster_context};
   # run test script if it exists
-  [[ -f "environment/wave-${i}/test.sh" ]] && ./environment/wave-${i}/test.sh
+  [[ -f "environment/wave-${i}/${environment_overlay}/test.sh" ]] && ./environment/wave-${i}/${environment_overlay}/test.sh
 done
 
 echo "END."
