@@ -2,6 +2,8 @@
 #!/bin/bash
 current_username=''$1''
 target_username=''$2''
+environment_overlay=${3:-prod} # prod, qa, dev
+
 # number of app waves in the environments directory
 environment_waves="$(ls ../environment | wc -l)"
 
@@ -23,5 +25,5 @@ fi
 
 # sed commands to replace target_username variable
 for i in $(seq ${environment_waves}); do 
-  sed -i '' -e 's/'${current_username}'/'${target_username}'/g' ../environment/wave-${i}/wave-${i}-aoa.yaml; 
+  sed -i '' -e 's/'${current_username}'/'${target_username}'/g' ../environment/wave-${i}/${environment_overlay}/wave-${i}-aoa.yaml; 
 done

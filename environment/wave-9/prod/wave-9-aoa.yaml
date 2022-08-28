@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/ably77/civo-kapoozi/
     targetRevision: HEAD
-    path: environment/wave-9/active/
+    path: environment/wave-9/prod/active/
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
