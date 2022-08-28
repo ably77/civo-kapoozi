@@ -13,6 +13,7 @@ spec:
   source:
     chart: gloo-mesh-enterprise
     helm:
+      skipCrds: true
       values: |
         licenseSecretName: gloo-mesh-license
         global:

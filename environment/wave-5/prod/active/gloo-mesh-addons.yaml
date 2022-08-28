@@ -13,6 +13,7 @@ spec:
   source:
     chart: gloo-mesh-agent
     helm:
+      skipCrds: true
       parameters:
       - name: ext-auth-service.enabled
         value: 'true'

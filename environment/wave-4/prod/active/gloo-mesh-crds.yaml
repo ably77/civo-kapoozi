@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wave-8-aoa
+  name: gloo-mesh-crds
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/ably77/civo-kapoozi/
+    repoURL: https://github.com/solo-io/gitops-library/
     targetRevision: HEAD
-    path: environment/wave-8/prod/active/
+    path: gloo-mesh/gloo-mesh-crds/2.1.0-beta22
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
