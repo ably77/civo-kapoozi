@@ -35,4 +35,4 @@ spec:
           header: X-Email
         - claim: groups
           header: X-Groups
-        keepToken: false
+        keepToken: true
