@@ -5,7 +5,6 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - bombardier-plantsblog.yaml
-- cert-manager.yaml
 - collaboration-workspace.yaml
 - collaboration-workspacesettings.yaml
 - drawio-rt-443.yaml
