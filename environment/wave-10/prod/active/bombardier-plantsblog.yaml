@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bombardier-httpbin
+  name: bombardier-plantsblog
   namespace: argocd
 spec:
   destination:
-    namespace: httpbin
+    namespace: collaboration-tools
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/solo-io/gitops-library'
@@ -14,19 +14,19 @@ spec:
     helm:
       parameters:
       - name: url
-        value: 'https://bookinfo.kapoozi.com/api/v1/products'
+        value: 'https://plants.kapoozi.com'
       - name: name_suffix
-        value: 'bookinfo'
+        value: 'plantsblog'
       - name: namespace
-        value: 'bookinfo-frontends'
+        value: 'collaboration-tools'
       - name: loops
         value: '10000'
       - name: connections
-        value: '1'
+        value: '5'
       - name: duration_seconds
         value: '60s'
       - name: rate
-        value: '1'
+        value: '4'
   project: default
   syncPolicy:
     automated:
