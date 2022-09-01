@@ -192,6 +192,12 @@ spec:
                         tag: "grafana"
                         url: "https://grafana.kapoozi.com/grafana"
                         target: "_blank" # optional html a tag target attribute
+                      - name: "uptime-dashboard"
+                        #subtitle: "Another application"
+                        icon: "fa-solid fa-heart-pulse"
+                        tag: "uptime"
+                        url: "https://uptime-cluster1.kapoozi.com"
+                        target: "_blank" # optional html a tag target attribute
                   
                   - name: "Web Applications"
                     icon: "fas fa-cloud"
