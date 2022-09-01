@@ -15,7 +15,7 @@ spec:
           number: 3001
         ref:
           cluster: cluster1
-          name: uptime-kuma
+          name: uptime
           namespace: uptime
     labels:
       waf: "true"
