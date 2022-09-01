@@ -30,10 +30,22 @@ spec:
     - uri:
         exact: /logout
     - uri:
-        prefix: /api/v1/products
-    - uri:
         prefix: /callback
     name: productpage
+  - forwardTo:
+      destinations:
+      - port:
+          number: 9080
+        ref:
+          name: productpage
+          namespace: bookinfo-frontends
+    labels:
+      waf: "true"
+      ratelimited: "true"
+    matchers:
+    - uri:
+        prefix: /api/v1/products
+    name: api-v1
   virtualGateways:
   - cluster: mgmt
     name: mgmt-north-south-gw-443
