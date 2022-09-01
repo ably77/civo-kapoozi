@@ -5,7 +5,6 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - bombardier.yaml
-- cert-manager.yaml
 - httpbin-extauth-policy.yaml
 - httpbin-in-mesh.yaml
 - httpbin-jwt-transformationpolicy.yaml

@@ -16,5 +16,4 @@ resources:
 - bank-ledger-writer.yaml
 - bank-transaction-history.yaml
 - bank-userservice.yaml
-- cert-manager.yaml
 
