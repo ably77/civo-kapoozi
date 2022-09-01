@@ -166,6 +166,12 @@ spec:
                   - name: "Admin Applications"
                     icon: "fas fa-user-cog"
                     items:
+                      - name: "Status Page"
+                        icon: "fas fa-arrow-circle-up"
+                        tag: "uptime"
+                        keywords: "uptime"
+                        url: "https://uptime-cluster1.kapoozi.com/status/admin"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "ArgoCD - mgmt"
                         #subtitle: "GitOps Tooling"
                         icon: "fab fa-git-alt"
@@ -200,9 +206,14 @@ spec:
                         target: "_blank" # optional html a tag target attribute
                   
                   - name: "Web Applications"
-                    subtitle: "status page: https://uptime-cluster1.kapoozi.com/status/webapps"
                     icon: "fas fa-cloud"
                     items:
+                      - name: "Status Page"
+                        icon: "fas fa-arrow-circle-up"
+                        tag: "uptime"
+                        keywords: "uptime"
+                        url: "https://uptime-cluster1.kapoozi.com/status/webapps"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "httpbin"
                         #subtitle: "httpbin"
                         icon: "far fa-window-maximize"
@@ -239,6 +250,12 @@ spec:
                   - name: "Collaboration Tools"
                     icon: "fas fa-users"
                     items:
+                      - name: "Status Page"
+                        icon: "fas fa-arrow-circle-up"
+                        tag: "uptime"
+                        keywords: "uptime"
+                        url: "https://uptime-cluster1.kapoozi.com/status/collaboration"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "draw.io"
                         #subtitle: "drawio"
                         icon: "fas fa-draw-polygon"
