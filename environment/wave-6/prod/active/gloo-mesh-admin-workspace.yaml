@@ -16,3 +16,5 @@ spec:
   - name: cluster1
     namespaces:
     - name: argocd
+    - name: uptime
+  

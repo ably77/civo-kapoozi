@@ -1,0 +1,32 @@
+apiVersion: networking.gloo.solo.io/v2
+kind: RouteTable
+metadata:
+  labels:
+    expose: "true"
+  name: uptime-cluster1-rt-443
+  namespace: uptime
+spec:
+  hosts:
+  - 'uptime-cluster1.kapoozi.com'
+  http:
+  - forwardTo:
+      destinations:
+      - port:
+          number: 3001
+        ref:
+          cluster: cluster1
+          name: uptime-kuma
+          namespace: uptime
+    labels:
+      waf: "true"
+    name: uptime
+    matchers:
+      - uri:
+          prefix: /
+      - uri:
+          prefix: /callback
+  virtualGateways:
+  - cluster: mgmt
+    name: cluster1-north-south-gw-443
+    namespace: istio-gateways
+  workloadSelectors: []
