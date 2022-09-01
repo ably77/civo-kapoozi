@@ -37,6 +37,8 @@ spec:
         app: in-mesh
         version: v1
         istio.io/rev: 1-13
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       serviceAccountName: in-mesh
       containers:
