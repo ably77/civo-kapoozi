@@ -19,6 +19,7 @@ spec:
           namespace: uptime
     labels:
       waf: "true"
+      uptime-oauth: "true"
     name: uptime
     matchers:
       - uri:
