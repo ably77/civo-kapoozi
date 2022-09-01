@@ -42,6 +42,8 @@ spec:
       labels:
         app: productpage
         version: v1
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       containers:
       - env:
