@@ -194,7 +194,7 @@ spec:
                         target: "_blank" # optional html a tag target attribute
                       - name: "uptime-dashboard"
                         #subtitle: "Another application"
-                        icon: "fa-solid fa-heart-pulse"
+                        icon: "fas fa-heartbeat"
                         tag: "uptime"
                         url: "https://uptime-cluster1.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
