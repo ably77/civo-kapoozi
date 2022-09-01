@@ -4,7 +4,7 @@ metadata:
   labels:
     expose: "true"
   name: uptime-cluster1-rt-443
-  namespace: uptime
+  namespace: gloo-mesh
 spec:
   hosts:
   - 'uptime-cluster1.kapoozi.com'
