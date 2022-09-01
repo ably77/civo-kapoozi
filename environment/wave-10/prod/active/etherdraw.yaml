@@ -24,6 +24,8 @@ spec:
       labels:
         app: etherdraw
         istio.io/rev: 1-13
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       containers:
       - image: quay.io/podium/etherdraw:latest

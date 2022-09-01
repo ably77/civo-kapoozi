@@ -652,6 +652,8 @@ spec:
       labels:
         app: etherpad
         istio.io/rev: 1-13
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       containers:
       - image: etherpad/etherpad:latest
