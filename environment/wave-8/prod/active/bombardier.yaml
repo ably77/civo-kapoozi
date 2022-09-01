@@ -24,9 +24,9 @@ spec:
       - name: connections
         value: '1'
       - name: duration_seconds
-        value: '20s'
+        value: '60s'
       - name: rate
-        value: '20'
+        value: '1'
   project: default
   syncPolicy:
     automated:
