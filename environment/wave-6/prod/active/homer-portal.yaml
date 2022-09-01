@@ -200,6 +200,7 @@ spec:
                         target: "_blank" # optional html a tag target attribute
                   
                   - name: "Web Applications"
+                    subtitle: "status page: https://uptime-cluster1.kapoozi.com/status/webapps"
                     icon: "fas fa-cloud"
                     items:
                       - name: "httpbin"
