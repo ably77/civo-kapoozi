@@ -36,6 +36,7 @@ spec:
       labels:
         app: not-in-mesh
         version: v1
+        sidecar.istio.io/inject: "false"
     spec:
       serviceAccountName: not-in-mesh
       containers:
