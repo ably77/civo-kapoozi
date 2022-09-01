@@ -221,10 +221,6 @@ spec:
                         tag: "solowallet"
                         url: "https://bank.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
-                  
-                  - name: "Collaboration Tools"
-                    icon: "fas fa-users"
-                    items:
                       - name: "ghost-blog"
                         #subtitle: "ghost-blog"
                         icon: "fas fa-ghost"
@@ -238,6 +234,10 @@ spec:
                         tag: "plants-blog"
                         url: "https://plants.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
+                  
+                  - name: "Collaboration Tools"
+                    icon: "fas fa-users"
+                    items:
                       - name: "draw.io"
                         #subtitle: "drawio"
                         icon: "fas fa-draw-polygon"
