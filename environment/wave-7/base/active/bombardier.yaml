@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bombardier-bookinfo
+  name: bombardier-httpbin
   namespace: argocd
 spec:
   destination:
@@ -14,11 +14,11 @@ spec:
     helm:
       parameters:
       - name: url
-        value: 'https://httpbin.kapoozi.com/anything/unprotected'
+        value: 'https://bookinfo.kapoozi.com/api/v1/products'
       - name: name_suffix
-        value: 'httpbin'
+        value: 'bookinfo'
       - name: namespace
-        value: 'httpbin'
+        value: 'bookinfo-frontends'
       - name: loops
         value: '10000'
       - name: connections
