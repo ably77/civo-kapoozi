@@ -38,9 +38,7 @@ data:
     plugins = /var/lib/grafana/plugins
     provisioning = /etc/grafana/provisioning
     [server]
-    protocol: https
-    domain = kapoozi.com
-    root_url = https://grafana.kapoozi.com/grafana/
+    root_url = %(protocol)s://%(domain)s:%(http_port)s/grafana/
     serve_from_sub_path = true
     [live]
     allowed_origins = "https://*.kapoozi.com"
