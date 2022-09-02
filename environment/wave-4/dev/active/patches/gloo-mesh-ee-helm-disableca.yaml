@@ -20,7 +20,8 @@ spec:
           cluster: mgmt
         mgmtClusterName: mgmt
         glooMeshMgmtServer:
-          serviceType: ClusterIP
+          serviceType: LoadBalancer
+          #serviceType: ClusterIP
           relay:
             disableCa: true
             disableCaCertGeneration: true
@@ -31,6 +32,20 @@ spec:
         glooMeshUi:
           serviceType: ClusterIP
           enabled: true
+          auth:
+            enabled: true
+            backend: oidc
+            oidc: 
+              # From the OIDC provider
+              clientId: "967359009029-ho41c483elb0m80p2arb11pgubp85vbv.apps.googleusercontent.com"
+              # From the OIDC provider. To be base64 encoded and stored as a kubernetes secret.
+              clientSecret: "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"
+              # Name for generated secret
+              clientSecretName: dashboard
+              # The issuer URL from the OIDC provider, usually something like 'https://<domain>.<provider_url>/'.
+              issuerUrl: https://accounts.google.com
+              # The URL that the UI for the OIDC app is available at, from the DNS and other ingress settings that expose the OIDC app UI service.
+              appUrl: "https://gmui.kapoozi.com"
           deploymentOverrides:
             spec:
               template:
