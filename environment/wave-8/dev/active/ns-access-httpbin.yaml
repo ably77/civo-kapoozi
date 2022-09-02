@@ -1,0 +1,28 @@
+apiVersion: security.policy.gloo.solo.io/v2
+kind: AccessPolicy
+metadata:
+  clusterName: mgmt
+  name: ns-access-httpbin
+  namespace: httpbin
+spec:
+  applyToDestinations:
+  - selector:
+      name: in-mesh
+      namespace: httpbin
+      cluster: mgmt
+      workspace: httpbin
+  config:
+    authn:
+      tlsMode: STRICT
+    authz:
+      allowedClients:
+      - serviceAccountSelector:
+          name: istio-ingressgateway
+          namespace: istio-gateways
+          cluster: mgmt
+      allowedPaths:
+      - /get*
+      - /anything*
+      allowedMethods:
+      - GET
+      - POST
