@@ -40,7 +40,7 @@ data:
     [server]
     protocol: https
     domain = kapoozi.com
-    root_url = %(protocol)s://grafana.%(domain)/grafana/
+    root_url = https://grafana.kapoozi.com/grafana/
     serve_from_sub_path = true
     [live]
     allowed_origins = "https://*.kapoozi.com"
