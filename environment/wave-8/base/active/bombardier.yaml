@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bombardier-bookinfo
+  name: bombardier-httpbin
   namespace: argocd
 spec:
   destination:
