@@ -4,6 +4,8 @@ metadata:
   clusterName: mgmt
   name: ns-access-productpage
   namespace: bookinfo-frontends
+  annotations:
+    clusterName: mgmt
 spec:
   applyToDestinations:
   - selector:
