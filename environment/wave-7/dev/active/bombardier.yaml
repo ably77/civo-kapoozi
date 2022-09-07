@@ -22,11 +22,11 @@ spec:
       - name: loops
         value: '10000'
       - name: connections
-        value: '4'
+        value: '1'
       - name: duration_seconds
         value: '60s'
       - name: rate
-        value: '3'
+        value: '12'
   project: default
   syncPolicy:
     automated:
