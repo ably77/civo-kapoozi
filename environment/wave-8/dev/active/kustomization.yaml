@@ -9,4 +9,4 @@ resources:
 - bombardier.yaml
 
 patchesStrategicMerge:
-- httpbin-ratelimitserverconfig.yaml
+- patches/httpbin-ratelimitserverconfig.yaml
