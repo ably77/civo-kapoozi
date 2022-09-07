@@ -20,6 +20,7 @@ spec:
           namespace: istio-gateways
           cluster: mgmt
       allowedPaths:
+      - /
       - /productpage
       - /api/v1/products
       allowedMethods:
