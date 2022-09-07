@@ -42,6 +42,14 @@ spec:
           loadBalancerSourceRanges: []
           externalTrafficPolicy: ""
         
+        resources:
+          requests:
+            cpu: 750m
+            memory: 256Mi
+          #limits:
+          #  cpu: 2000m
+          #  memory: 1024Mi
+        
         # Pod environment variables
         env: {}
 
