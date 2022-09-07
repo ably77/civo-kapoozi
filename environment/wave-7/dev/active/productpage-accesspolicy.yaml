@@ -21,6 +21,7 @@ spec:
           cluster: mgmt
       allowedPaths:
       - /productpage*
+      - /api/v1/products
       allowedMethods:
       - GET
       - POST
