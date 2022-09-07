@@ -13,5 +13,5 @@ spec:
         descriptors:
           - key: remote_address
             rateLimit:
-              requestsPerUnit: 500
+              requestsPerUnit: 800
               unit: MINUTE
