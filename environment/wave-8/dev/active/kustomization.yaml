@@ -6,3 +6,7 @@ kind: Kustomization
 resources:
 - ../../base/active/
 - httpbin-accesspolicy.yaml
+- bombardier.yaml
+
+patchesStrategicMerge:
+- httpbin-ratelimitserverconfig.yaml
