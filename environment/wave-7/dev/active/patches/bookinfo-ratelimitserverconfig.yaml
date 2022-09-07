@@ -1,0 +1,17 @@
+apiVersion: admin.gloo.solo.io/v2
+kind: RateLimitServerConfig
+metadata:
+  labels:
+    workspace.solo.io/exported: "true"
+  name: bookinfo
+  namespace: gloo-mesh-addons
+spec:
+  raw:
+    descriptors:
+      - key: generic_key
+        value: "per-minute"
+        descriptors:
+          - key: remote_address
+            rateLimit:
+              requestsPerUnit: 500
+              unit: MINUTE
