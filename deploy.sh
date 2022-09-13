@@ -29,14 +29,14 @@ cd ..
 ./tools/wait-for-rollout.sh deployment argocd-server argocd 20 ${cluster_context}
 
 # deploy app of app waves
-for i in $(seq $(ls environment | wc -l)); do 
-  echo "starting wave-${i}"
+for i in $(ls -l environment/ | grep -v ^total | awk '{print $9}'); do 
+  echo "starting ${i}"
   # run init script if it exists
-  [[ -f "environment/wave-${i}/init.sh" ]] && ./environment/wave-${i}/init.sh
+  [[ -f "environment/${i}/init.sh" ]] && ./environment/${i}/init.sh ${i} ${environment_overlay}
   # deploy aoa wave
-  kubectl apply -f environment/wave-${i}/${environment_overlay}/wave-${i}-aoa.yaml --context ${cluster_context};
+  ./tools/configure-wave.sh ${i} ${environment_overlay} ${cluster_context}
   # run test script if it exists
-  [[ -f "environment/wave-${i}/test.sh" ]] && ./environment/wave-${i}/test.sh
+  [[ -f "environment/${i}/test.sh" ]] && ./environment/${i}/test.sh
 done
 
 echo "END."
