@@ -52,6 +52,10 @@ spec:
         - name: REVIEWS_HOSTNAME
           value: reviews.bookinfo-backends.svc.cluster.local
         image: us-central1-docker.pkg.dev/solo-test-236622/jmunozro/examples-bookinfo-productpage-v1:1.16.2
+        resources:
+          requests:
+            memory: "120Mi"
+            cpu: "110m"
         imagePullPolicy: IfNotPresent
         name: productpage
         ports:
