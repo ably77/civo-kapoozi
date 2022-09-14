@@ -279,8 +279,23 @@ spec:
                         icon: "fas fa-images"
                         tag: "photoprism"
                         url: "https://photoprism.kapoozi.com"
-                        target: "_blank" # optional html a tag target attribute            
+                        target: "_blank" # optional html a tag target attribute 
+                  - name: "Games"
+                    icon: "fas fa-gamepad"
+                    items:
+                      - name: "Status Page"
+                        icon: "fas fa-arrow-circle-up"
+                        tag: "uptime"
+                        keywords: "uptime"
+                        url: "https://uptime-cluster1.kapoozi.com/status/games"
+                        target: "_blank" # optional html a tag target attribute   
+                      - name: "Infinite Super Mario Bros"
+                        icon: "fas fa-gamepad"
+                        tag: "supermario"
+                        keywords: "supermario"
+                        url: "https://supermario.kapoozi.com"
+                        target: "_blank" # optional html a tag target attribute          
   syncPolicy:
     automated:
-      prune: false
-      selfHeal: false
+      prune: true
+      selfHeal: true
