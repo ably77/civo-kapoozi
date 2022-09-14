@@ -1,7 +1,7 @@
 apiVersion: admin.gloo.solo.io/v2
 kind: Workspace
 metadata:
-  name: bank-lob
+  name: games
   namespace: gloo-mesh
   labels:
     allow_ingress: "true"
