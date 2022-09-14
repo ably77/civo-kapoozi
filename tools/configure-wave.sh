@@ -8,6 +8,13 @@ github_username=${4:-ably77}
 repo_name=${5:-civo-kapoozi}
 target_branch=${6:-HEAD}
 
+# check to see if wave name variable was passed through, if not prompt for it
+if [[ ${wave_name} == "" ]]
+  then
+    # provide license key
+    echo "Please provide the wave name:"
+    read wave_name
+fi
 
 kubectl --context ${cluster_context} apply -f - <<EOF
 apiVersion: argoproj.io/v1alpha1

@@ -273,6 +273,12 @@ spec:
                         icon: "fas fa-palette"
                         tag: "etherdraw"
                         url: "https://etherdraw.kapoozi.com"
+                        target: "_blank" # optional html a tag target attribute
+                      - name: "photoprism"
+                        #subtitle: "photoprism"
+                        icon: "fas fa-images"
+                        tag: "photoprism"
+                        url: "https://photoprism.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute            
   syncPolicy:
     automated:
