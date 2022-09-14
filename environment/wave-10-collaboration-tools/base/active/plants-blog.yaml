@@ -79,6 +79,7 @@ metadata:
   labels:
     app: plants-blog
 spec:
+  persistentVolumeReclaimPolicy: Retain
   accessModes:
     - ReadWriteOnce
   resources:
