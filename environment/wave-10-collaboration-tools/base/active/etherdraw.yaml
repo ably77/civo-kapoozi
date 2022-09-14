@@ -35,7 +35,6 @@ spec:
             cpu: "30m"
         imagePullPolicy: Always
         name: etherdraw
-        resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst

@@ -659,11 +659,10 @@ spec:
       - image: etherpad/etherpad:latest
         resources:
           requests:
-            memory: "160Mi"
-            cpu: "20m"
+            memory: "100Mi"
+            cpu: "30m"
         imagePullPolicy: Always
         name: etherpad
-        resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         volumeMounts:
