@@ -26,6 +26,7 @@ resources:
 - httpbin-okta-client-secret.yaml
 - istio-gateways-ns.yaml
 - istio-system-ns.yaml
+- supermario-ns.yaml
 - web-portal-ns.yaml
 
 commonLabels:
