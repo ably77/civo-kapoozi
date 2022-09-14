@@ -31,7 +31,7 @@ spec:
       - image: quay.io/podium/etherdraw:latest
         resources:
           requests:
-            memory: "110Mi"
+            memory: "100Mi"
             cpu: "30m"
         imagePullPolicy: Always
         name: etherdraw

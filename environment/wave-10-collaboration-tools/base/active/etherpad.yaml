@@ -659,7 +659,7 @@ spec:
       - image: etherpad/etherpad:latest
         resources:
           requests:
-            memory: "1600Mi"
+            memory: "160Mi"
             cpu: "20m"
         imagePullPolicy: Always
         name: etherpad

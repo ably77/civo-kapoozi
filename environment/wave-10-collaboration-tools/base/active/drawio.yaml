@@ -20,19 +20,12 @@ spec:
     spec:
       containers:
         - image: docker.io/jgraph/drawio
-          resources:
-            requests:
-              memory: "170Mi"
-              cpu: "30m"
           imagePullPolicy: IfNotPresent
           name: drawio
           resources:
-            limits:
-              cpu: 200m
-              memory: 512Mi
             requests:
-              cpu: 50m
-              memory: 128Mi
+              cpu: 20m
+              memory: 170Mi
           ports:
             - containerPort: 8080
 ---
