@@ -41,6 +41,10 @@ spec:
       serviceAccountName: not-in-mesh
       containers:
       - image: docker.io/kennethreitz/httpbin
+        resources:
+          requests:
+            memory: "40Mi"
+            cpu: "5m"
         imagePullPolicy: IfNotPresent
         name: not-in-mesh
         ports:
