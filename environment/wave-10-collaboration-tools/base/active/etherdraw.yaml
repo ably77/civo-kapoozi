@@ -29,6 +29,10 @@ spec:
     spec:
       containers:
       - image: quay.io/podium/etherdraw:latest
+        resources:
+          requests:
+            memory: "110Mi"
+            cpu: "30m"
         imagePullPolicy: Always
         name: etherdraw
         resources: {}
