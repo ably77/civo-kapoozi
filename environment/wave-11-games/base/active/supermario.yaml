@@ -56,6 +56,8 @@ spec:
       labels:
         app.kubernetes.io/name: supermario
         app.kubernetes.io/instance: supermario
+      annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     spec:
       serviceAccountName: supermario
       automountServiceAccountToken: true
@@ -66,7 +68,7 @@ spec:
           image: "pengbai/docker-supermario:latest"
           resources:
             requests:
-              cpu: 100m
+              cpu: 20m
               memory: 100Mi
           imagePullPolicy: IfNotPresent
           ports:
