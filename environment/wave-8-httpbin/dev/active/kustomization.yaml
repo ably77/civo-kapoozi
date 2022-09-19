@@ -11,3 +11,4 @@ resources:
 
 patchesStrategicMerge:
 - patches/httpbin-ratelimitserverconfig.yaml
+- patches/httpbin-oauth-rt-443.yaml
