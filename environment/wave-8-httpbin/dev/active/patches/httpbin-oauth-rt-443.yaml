@@ -58,7 +58,6 @@ spec:
       matchers:
       - uri:
           prefix: /plow
-          prefix: /echarts
       forwardTo:
         pathRewrite: '/'
         destinations:
