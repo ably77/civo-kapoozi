@@ -57,11 +57,11 @@ spec:
         ratelimited: "true"
       matchers:
       - uri:
-          prefix: /plow
-      - uri:
-          prefix: /echarts
+          prefix: /
+      #- uri:
+      #    prefix: /echarts
       forwardTo:
-        pathRewrite: '/'
+        #pathRewrite: '/'
         destinations:
         - ref:
             name: plow-httpbin
