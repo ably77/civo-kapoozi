@@ -58,10 +58,10 @@ spec:
       matchers:
       - uri:
           prefix: /
-      #- uri:
-      #    prefix: /echarts
+      - uri:
+          prefix: /prow
       forwardTo:
-        #pathRewrite: '/'
+        pathRewrite: '/prow'
         destinations:
         - ref:
             name: plow-httpbin
