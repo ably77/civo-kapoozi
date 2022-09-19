@@ -59,6 +59,7 @@ spec:
       - uri:
           exact: /plow
       forwardTo:
+        pathRewrite: '/'
         destinations:
         - ref:
             name: plow-httpbin
