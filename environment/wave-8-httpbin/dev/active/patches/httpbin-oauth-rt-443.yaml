@@ -58,6 +58,8 @@ spec:
       matchers:
       - uri:
           exact: /plow
+      redirect:
+        pathRedirect: /
       forwardTo:
         destinations:
         - ref:
