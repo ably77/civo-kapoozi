@@ -58,9 +58,8 @@ spec:
       matchers:
       - uri:
           exact: /plow
-      redirect:
-        pathRedirect: /
       forwardTo:
+        pathRewrite: /
         destinations:
         - ref:
             name: plow-httpbin
