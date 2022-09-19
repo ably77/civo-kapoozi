@@ -48,7 +48,7 @@ spec:
       - name: resources.requests.cpu
         value: '20m'
       - name: resources.requests.mem
-        value: '10Mi'
+        value: '60Mi'
   project: default
   syncPolicy:
     automated:
