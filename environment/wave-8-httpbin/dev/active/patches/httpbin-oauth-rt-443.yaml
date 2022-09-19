@@ -57,7 +57,7 @@ spec:
         ratelimited: "true"
       matchers:
       - uri:
-          exact: /plow
+          prefix: /plow
       forwardTo:
         pathRewrite: '/'
         destinations:
