@@ -6,6 +6,10 @@ This repo provides a multitenant capable GitOps workflow structure that can be f
 - istio 1.13.4
 - revision: 1-13
 
+This repo is meant to be deployed along with the following repos to create the entire High Level Architecture diagram below.
+- https://github.com/ably77/civo-kapoozi-c1
+- https://github.com/ably77/civo-kapoozi-c2
+
 # Prerequisites 
 - 1 Kubernetes Cluster
     - This demo has been tested on 1x `n2-standard-4` (gke), `m5.xlarge` (aws), or `Standard_DS3_v2` (azure) instance for `mgmt` cluster
