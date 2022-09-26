@@ -55,7 +55,7 @@ spec:
                   labels:
                     istio.io/rev: "1-13"
     repoURL: https://storage.googleapis.com/gloo-mesh-enterprise/gloo-mesh-enterprise
-    targetRevision: 2.1.0-beta24
+    targetRevision: 2.1.0-beta27
   syncPolicy:
     automated:
       prune: true
