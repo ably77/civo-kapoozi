@@ -11,8 +11,6 @@ resources:
 - bookinfo-backends-ns.yaml
 - bookinfo-frontends-ns.yaml
 - bookinfo-okta-client-secret.yaml
-- cert-manager-cacerts.yaml
-- cert-manager-ns.yaml
 - collaboration-tools-ns.yaml
 - ghost-blog-pvc.yaml
 - ghost-okta-client-secret.yaml
