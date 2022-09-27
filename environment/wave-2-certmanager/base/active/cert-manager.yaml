@@ -17,6 +17,8 @@ spec:
           value: 'true'
   project: default
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
