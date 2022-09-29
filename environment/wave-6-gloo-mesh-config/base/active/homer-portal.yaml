@@ -221,6 +221,13 @@ spec:
                         keywords: "httpbin"
                         url: "https://httpbin.kapoozi.com/get"
                         target: "_blank" # optional html a tag target attribute
+                      - name: "httpbin-loadgenerator"
+                        #subtitle: "httpbin"
+                        icon: "fab fa-creative-commons-sampling"
+                        tag: "httpbin-loadgen"
+                        keywords: "httpbin-loadgen"
+                        url: "https://httpbin.kapoozi.com/plow"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "bookinfo"
                         #subtitle: "bookinfo"
                         icon: "fas fa-book-reader"
