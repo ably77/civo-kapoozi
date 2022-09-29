@@ -8,5 +8,4 @@ resources:
 - plow-loadgen-argo.yaml
 
 patchesStrategicMerge:
-- patches/bookinfo-ratelimitserverconfig.yaml
 - patches/bookinfo-oauth-rt-443.yaml
