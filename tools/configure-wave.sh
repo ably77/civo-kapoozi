@@ -20,7 +20,7 @@ kubectl --context ${cluster_context} apply -f - <<EOF
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ${wave_name}-aoa
+  name: wave-${wave_name}-aoa
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
