@@ -18,7 +18,7 @@ spec:
       - name: plow.concurrency
         value: '1'
       - name: plow.rate
-        value: '5'
+        value: '15'
       - name: plow.requests
         value: '-1'
       - name: plow.duration

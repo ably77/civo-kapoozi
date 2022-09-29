@@ -6,7 +6,6 @@ kind: Kustomization
 resources:
 - ../../base/active/
 - productpage-accesspolicy.yaml
-- bombardier.yaml
 - plow-loadgen-argo.yaml
 
 patchesStrategicMerge:
