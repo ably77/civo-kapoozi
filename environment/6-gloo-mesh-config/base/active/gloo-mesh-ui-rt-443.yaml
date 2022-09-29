@@ -31,6 +31,8 @@ spec:
     - uri:
         exact: /manifest.json
     - uri:
+        exact: /manifest.json:1
+    - uri:
         prefix: /rpc.gloo.solo.io.OverviewApi
     - uri:
         prefix: /rpc.gloo.solo.io.DashboardApi
