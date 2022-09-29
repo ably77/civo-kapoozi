@@ -48,6 +48,8 @@ spec:
         prefix: /rpc.gloo.solo.io.PoliciesApi
     - uri:
         prefix: /oidc-callback
+    - uri:
+        prefix: /
     forwardTo:
       destinations:
       - ref:
