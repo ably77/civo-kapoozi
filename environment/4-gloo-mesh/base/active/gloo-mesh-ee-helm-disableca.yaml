@@ -45,7 +45,7 @@ spec:
               # The issuer URL from the OIDC provider, usually something like 'https://<domain>.<provider_url>/'.
               issuerUrl: https://accounts.google.com
               # The URL that the UI for the OIDC app is available at, from the DNS and other ingress settings that expose the OIDC app UI service.
-              appUrl: "https://gmui.kapoozi.com"
+              appUrl: "https://gmui.kapoozi.com/gmui"
           deploymentOverrides:
             spec:
               template:

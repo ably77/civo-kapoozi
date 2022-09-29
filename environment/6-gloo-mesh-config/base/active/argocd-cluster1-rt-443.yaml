@@ -9,7 +9,14 @@ spec:
   hosts:
   - 'argocd-cluster1.kapoozi.com'
   http:
-  - forwardTo:
+  - name: argocd
+    labels:
+      waf: "true"
+      #argocd-oauth: "true"
+    matchers:
+    - uri:
+        prefix: /argo
+    forwardTo:
       destinations:
       - port:
           number: 443
@@ -17,10 +24,6 @@ spec:
           cluster: cluster1
           name: argocd-server
           namespace: argocd
-    labels:
-      waf: "true"
-      #argocd-oauth: "true"
-    name: argocd
     matchers:
       - uri:
           prefix: /

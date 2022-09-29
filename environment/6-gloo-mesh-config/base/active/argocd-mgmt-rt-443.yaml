@@ -23,7 +23,7 @@ spec:
     name: argocd
     matchers:
       - uri:
-          prefix: /
+          prefix: /argo
       - uri:
           prefix: /callback
   virtualGateways:

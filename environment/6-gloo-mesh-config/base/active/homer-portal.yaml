@@ -190,7 +190,7 @@ spec:
                         #subtitle: "Another application"
                         icon: "fab fa-earlybirds"
                         tag: "gmui"
-                        url: "https://gmui.kapoozi.com"
+                        url: "https://gmui.kapoozi.com/gmui"
                         target: "_blank" # optional html a tag target attribute
                       - name: "Grafana"
                         #subtitle: "Another application"

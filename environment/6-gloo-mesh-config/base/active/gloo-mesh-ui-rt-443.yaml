@@ -9,19 +9,13 @@ spec:
   hosts:
   - 'gmui.kapoozi.com'
   http:
-  - forwardTo:
-      destinations:
-      - ref:
-          name: gloo-mesh-ui
-          namespace: gloo-mesh
-        port:
-          number: 8090
+  - name: gloo-mesh-ui-main
     labels:
-      waf: "true"
-    name: gloo-mesh-ui
     matchers:
     - uri:
-        prefix: /
+        prefix: /welcome
+    - uri:
+        prefix: /login
     - uri:
         prefix: /graph
     - uri:
@@ -29,7 +23,49 @@ spec:
     - uri:
         prefix: /policies
     - uri:
-          prefix: /oidc-callback
+        prefix: /static
+    - uri:
+        prefix: /workspace
+    - uri:
+        exact: /favicon.ico
+    - uri:
+        exact: /manifest.json
+    - uri:
+        prefix: /rpc.gloo.solo.io.OverviewApi
+    - uri:
+        prefix: /rpc.gloo.solo.io.DashboardApi
+    - uri:
+        prefix: /rpc.gloo.solo.io.GraphApi
+    - uri:
+        prefix: /rpc.gloo.solo.io.DebugApi
+    - uri:
+        prefix: /rpc.gloo.solo.io.WorkspacesApi
+    - uri:
+        prefix: /rpc.gloo.solo.io.RoutingApi
+    - uri:
+        prefix: /rpc.gloo.solo.io.PoliciesApi
+    - uri:
+        prefix: /oidc-callback
+    forwardTo:
+      destinations:
+      - ref:
+          name: gloo-mesh-ui
+          namespace: gloo-mesh
+        port:
+          number: 8090
+  - name: gmui-rewrite
+    labels:
+    matchers:
+    - uri:
+        prefix: /gmui
+    forwardTo:
+      pathRewrite: /
+      destinations:
+      - ref:
+          name: gloo-mesh-ui
+          namespace: gloo-mesh
+        port:
+          number: 8090
   virtualGateways:
   - cluster: mgmt
     name: mgmt-north-south-gw-443
