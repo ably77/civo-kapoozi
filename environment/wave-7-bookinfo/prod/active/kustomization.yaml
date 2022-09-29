@@ -5,8 +5,8 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - ../../base/active/
-- productpage-accesspolicy.yaml
-- bombardier.yaml
+- plow-loadgen-argo.yaml
 
 patchesStrategicMerge:
 - patches/bookinfo-ratelimitserverconfig.yaml
+- patches/bookinfo-oauth-rt-443.yaml
