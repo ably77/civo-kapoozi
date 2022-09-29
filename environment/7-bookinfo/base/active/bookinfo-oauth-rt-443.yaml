@@ -46,6 +46,37 @@ spec:
         ref:
           name: productpage
           namespace: bookinfo-frontends
+  - name: plow-productpage-rewrite
+    labels:
+      waf: "true"
+      ratelimited: "true"
+    matchers:
+    - uri:
+        prefix: /plow
+    forwardTo:
+      pathRewrite: /
+      destinations:
+      - ref:
+          name: plow-productpage
+          namespace: bookinfo-frontends
+        port:
+          number: 18888
+  - name: plow-productpage
+    labels:
+      waf: "true"
+      ratelimited: "true"
+    matchers:
+    - uri:
+        prefix: /data
+    - uri:
+        prefix: /echarts
+    forwardTo:
+      destinations:
+      - ref:
+          name: plow-productpage
+          namespace: bookinfo-frontends
+        port:
+          number: 18888
   virtualGateways:
   - cluster: mgmt
     name: mgmt-north-south-gw-443

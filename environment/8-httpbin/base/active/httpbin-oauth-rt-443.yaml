@@ -51,3 +51,34 @@ spec:
             namespace: httpbin
           port:
             number: 8000
+    - name: httpbin-plow-rewrite
+      labels:
+        waf: "true"
+        ratelimited: "true"
+      matchers:
+      - uri:
+          prefix: /plow
+      forwardTo:
+        pathRewrite: /
+        destinations:
+        - ref:
+            name: plow-httpbin
+            namespace: httpbin
+          port:
+            number: 18888
+    - name: httpbin-plow
+      labels:
+        waf: "true"
+        ratelimited: "true"
+      matchers:
+      - uri:
+          prefix: /data
+      - uri:
+          prefix: /echarts
+      forwardTo:
+        destinations:
+        - ref:
+            name: plow-httpbin
+            namespace: httpbin
+          port:
+            number: 18888

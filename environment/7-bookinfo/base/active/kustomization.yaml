@@ -16,4 +16,6 @@ resources:
 - bookinfo-wafpolicy-log4shell.yaml
 - bookinfo-workspace.yaml
 - bookinfo-workspacesettings.yaml
+- plow-loadgen-argo.yaml
+- productpage-accesspolicy.yaml
 

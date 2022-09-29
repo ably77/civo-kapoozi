@@ -5,8 +5,3 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - ../../base/active/
-- httpbin-accesspolicy.yaml
-- plow-loadgen-argo.yaml
-
-patchesStrategicMerge:
-- patches/httpbin-oauth-rt-443.yaml

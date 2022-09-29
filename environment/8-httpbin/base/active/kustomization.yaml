@@ -21,4 +21,6 @@ resources:
 - httpbin-wafpolicy-log4shell.yaml
 - httpbin-workspace.yaml
 - httpbin-workspacesettings.yaml
+- httpbin-accesspolicy.yaml
+- plow-loadgen-argo.yaml
 
