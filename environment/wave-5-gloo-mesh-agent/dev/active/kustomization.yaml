@@ -6,6 +6,6 @@ kind: Kustomization
 resources:
 - ../../base/active/
 
-patchesStrategicMerge:
-- patches/gloo-mesh-agent.yaml
-- patches/gloo-mesh-addons.yaml
+#patchesStrategicMerge:
+#- patches/gloo-mesh-agent.yaml
+#- patches/gloo-mesh-addons.yaml
