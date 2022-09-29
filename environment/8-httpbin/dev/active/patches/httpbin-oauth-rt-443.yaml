@@ -73,6 +73,8 @@ spec:
       matchers:
       - uri:
           prefix: /data
+      - uri:
+          prefix: /echarts
       forwardTo:
         destinations:
         - ref:
