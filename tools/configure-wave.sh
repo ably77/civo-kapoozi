@@ -2,7 +2,7 @@
 #set -e
 
 wave_name=${1:-""}
-environment_overlay=${2:-prod} # prod, qa, dev, base
+environment_overlay=${2:-""} # prod, qa, dev, base
 cluster_context=${3:-mgmt}
 github_username=${4:-ably77}
 repo_name=${5:-civo-kapoozi}
@@ -14,6 +14,14 @@ if [[ ${wave_name} == "" ]]
     # provide license key
     echo "Please provide the wave name:"
     read wave_name
+fi
+
+# check to see if environment overlay variable was passed through, if not prompt for it
+if [[ ${environment_overlay} == "" ]]
+  then
+    # provide environment overlay
+    echo "Please provide the environment overlay to use (i.e. prod, dev, qa):"
+    read environment_overlay
 fi
 
 kubectl --context ${cluster_context} apply -f - <<EOF
