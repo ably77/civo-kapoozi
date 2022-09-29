@@ -6,6 +6,7 @@ kind: Kustomization
 resources:
 - ../../base/active/
 
-patchesStrategicMerge:
-- patches/gloo-mesh-crds.yaml
-- patches/gloo-mesh-ee-helm-disableca.yaml
+# uncomment patch if testing a version other than base
+#patchesStrategicMerge:
+#- patches/gloo-mesh-crds.yaml
+#- patches/gloo-mesh-ee-helm-disableca.yaml
