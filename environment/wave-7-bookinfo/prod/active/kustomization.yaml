@@ -5,3 +5,8 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - ../../base/active/
+- productpage-accesspolicy.yaml
+- bombardier.yaml
+
+patchesStrategicMerge:
+- patches/bookinfo-ratelimitserverconfig.yaml
