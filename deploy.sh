@@ -35,9 +35,9 @@ cd ..
 for i in $(ls environment | sort -n); do 
   echo "starting ${i}"
   # run init script if it exists
-  [[ -f "environment/${i}/init.sh" ]] && ./environment/${i}/init.sh ${i} ${environment_overlay} ${cluster_context} ${github_username} ${repo_name} ${target_branch}
+  [[ -f "environment/${i}/init.sh" ]] && ./environment/${i}/init.sh 
   # deploy aoa wave
-  ./tools/configure-wave.sh ${i} ${environment_overlay} ${cluster_context}
+  ./tools/configure-wave.sh ${i} ${environment_overlay} ${cluster_context} ${github_username} ${repo_name} ${target_branch}
   # run test script if it exists
   [[ -f "environment/${i}/test.sh" ]] && ./environment/${i}/test.sh
 done
