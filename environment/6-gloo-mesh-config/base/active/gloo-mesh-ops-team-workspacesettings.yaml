@@ -1,0 +1,20 @@
+apiVersion: admin.gloo.solo.io/v2
+kind: WorkspaceSettings
+metadata:
+  name: ops-team
+  namespace: ops-team-config
+spec:
+  exportTo:
+  - workspaces:
+    - name: '*'
+  importFrom:
+  - workspaces:
+    - name: '*'
+  options:
+    federation:                     # federate only the gloo-mesh-addons
+      enabled: true
+      serviceSelector:
+      - namespace: gloo-mesh-addons
+      hostSuffix: global
+      serviceSelector:
+      - namespace: gloo-mesh-addons
