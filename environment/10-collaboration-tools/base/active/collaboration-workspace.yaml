@@ -3,8 +3,6 @@ kind: Workspace
 metadata:
   name: collaboration
   namespace: gloo-mesh
-  labels:
-    allow_ingress: "true"
 spec:
   workloadClusters:
   - name: '*'
