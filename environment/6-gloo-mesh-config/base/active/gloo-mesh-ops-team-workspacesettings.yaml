@@ -6,7 +6,14 @@ metadata:
 spec:
   exportTo:
   - workspaces:
-    - name: '*'
+    - name: "*"
+    resources:
+    - kind: SERVICE
+      namespace: gloo-mesh-addons
+    - kind: SERVICE
+      namespace: istio-gateways
+    - kind: VIRTUAL_DESTINATION
+      namespace: gloo-mesh-addons
   importFrom:
   - workspaces:
     - name: '*'
