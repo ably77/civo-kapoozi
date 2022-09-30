@@ -7,9 +7,6 @@ metadata:
     allow_ingress: "true"
 spec:
   workloadClusters:
-  - name: mgmt
-    namespaces:
-    - name: collaboration-tools
-  - name: cluster1
+  - name: '*'
     namespaces:
     - name: collaboration-tools

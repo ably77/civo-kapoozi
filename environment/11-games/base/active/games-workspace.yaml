@@ -7,6 +7,6 @@ metadata:
     allow_ingress: "true"
 spec:
   workloadClusters:
-  - name: mgmt
+  - name: '*'
     namespaces:
     - name: supermario

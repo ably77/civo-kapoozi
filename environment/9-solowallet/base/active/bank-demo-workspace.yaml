@@ -3,10 +3,8 @@ kind: Workspace
 metadata:
   name: bank-lob
   namespace: gloo-mesh
-  labels:
-    allow_ingress: "true"
 spec:
   workloadClusters:
-  - name: mgmt
+  - name: '*'
     namespaces:
     - name: bank-demo

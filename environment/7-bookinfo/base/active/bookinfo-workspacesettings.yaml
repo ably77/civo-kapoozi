@@ -5,20 +5,16 @@ metadata:
   namespace: bookinfo-frontends
 spec:
   exportTo:
-  - resources:
-    - kind: SERVICE
-      labels:
-        app: productpage
-    - kind: SERVICE
-      labels:
-        app: reviews
-    - kind: ALL
-      labels:
-        expose: "true"
-    workspaces:
-    - name: gateways
+  - workspaces:
+    - name: ops-team
   importFrom:
-  - resources:
-    - kind: SERVICE
-    workspaces:
-    - name: gateways
+  - workspaces:
+    - name: ops-team
+  options:
+    federation:                     # enable service federation of the web-ui namespace
+      enabled: false
+      serviceSelector:
+      - namespace: bookinfo-frontends
+    serviceIsolation:               # enable service isolation and Istio Sidecar resource
+      enabled: false
+      trimProxyConfig: false

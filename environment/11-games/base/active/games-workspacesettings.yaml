@@ -5,18 +5,16 @@ metadata:
   namespace: supermario
 spec:
   exportTo:
-  - resources:
-    - kind: ALL
-      labels:
-        expose: "true"
-    workspaces:
-    - name: gateways
+  - workspaces:
+    - name: ops-team
   importFrom:
-  - resources:
-    - kind: SERVICE
-    workspaces:
-    - name: gateways
+  - workspaces:
+    - name: ops-team
   options:
-    federation:
+    federation:                     # enable service federation of the web-ui namespace
       enabled: false
-      hostSuffix: global
+      serviceSelector:
+      - namespace: supermario
+    serviceIsolation:               # enable service isolation and Istio Sidecar resource
+      enabled: false
+      trimProxyConfig: false
