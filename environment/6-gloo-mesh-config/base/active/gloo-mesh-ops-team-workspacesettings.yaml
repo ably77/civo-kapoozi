@@ -13,8 +13,6 @@ spec:
   options:
     federation:                     # federate only the gloo-mesh-addons
       enabled: true
-      serviceSelector:
-      - namespace: gloo-mesh-addons
       hostSuffix: global
       serviceSelector:
       - namespace: gloo-mesh-addons
