@@ -1,17 +1,9 @@
 #!/bin/bash
 #set -e
 
-# replace the parameter below with your designated cluster context
-# note that the character '_' is an invalid value
-#
-# please use `kubectl config rename-contexts <current_context> <target_context>` to
-# rename your context if necessary
-LICENSE_KEY=${1:-""}
-environment_overlay=${2:-""} # prod, qa, dev, base
-cluster_context=${3:-mgmt}
-github_username=${4:-ably77}
-repo_name=${5:-civo-kapoozi}
-target_branch=${6:-HEAD}
+# source vars from root directory vars.txt
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+source $SCRIPT_DIR/vars.txt
 
 # check to see if defined contexts exist
 if [[ $(kubectl config get-contexts | grep ${cluster_context}) == "" ]] ; then

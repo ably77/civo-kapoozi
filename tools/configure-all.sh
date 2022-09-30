@@ -1,13 +1,17 @@
 #!/bin/bash
 #set -e
 
-# replace the parameter below with your designated cluster context
-# note that the character '_' is an invalid value
-#
-# please use `kubectl config rename-contexts <current_context> <target_context>` to
-# rename your context if necessary
-cluster_context=${1:-mgmt}
-environment_overlay=${2:-""} # prod, qa, dev, base
+# source vars from root directory vars.txt
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+source $SCRIPT_DIR/../vars.txt
+
+# check to see if cluster context variable was passed through, if not prompt for it
+if [[ ${cluster_context} == "" ]]
+  then
+    # provide cluster context overlay
+    echo "Please provide the cluster context to use (i.e. mgmt, cluster1, cluster2):"
+    read cluster_context
+fi
 
 # check to see if environment overlay variable was passed through, if not prompt for it
 if [[ ${environment_overlay} == "" ]]
@@ -21,5 +25,5 @@ fi
 for i in $(ls ../environment | sort -n); do 
   echo "starting ${i}"
   # deploy aoa wave
-  ./configure-wave.sh ${i} ${environment_overlay} ${cluster_context}
+  ./configure-wave.sh ${i} ${environment_overlay} ${cluster_context} ${github_username} ${repo_name} ${target_branch}
 done
