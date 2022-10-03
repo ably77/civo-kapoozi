@@ -7,6 +7,6 @@ resources:
 - ../../base/active/
 
 # uncomment patch if testing a version other than base
-#patchesStrategicMerge:
-#- patches/gloo-mesh-crds.yaml
-#- patches/gloo-mesh-ee-helm-disableca.yaml
+patchesStrategicMerge:
+- patches/gloo-mesh-crds.yaml
+- patches/gloo-mesh-ee-helm-disableca.yaml
