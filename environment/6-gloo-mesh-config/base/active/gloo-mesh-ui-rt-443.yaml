@@ -49,6 +49,8 @@ spec:
     - uri:
         prefix: /rpc.gloo.solo.io.DestinationsApi
     - uri:
+        prefix: /rpc.gloo.solo.io.GraphqlApi
+    - uri:
         prefix: /oidc-callback
     - uri:
         exact: /
