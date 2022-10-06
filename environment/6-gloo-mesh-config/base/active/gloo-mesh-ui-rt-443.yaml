@@ -30,10 +30,6 @@ spec:
         exact: /favicon.ico
     - uri:
         regex: /manifest.json*
-    #- uri:
-    #    exact: /manifest.json
-    #- uri:
-    #    exact: /manifest.json:1
     - uri:
         regex: /rpc.gloo.solo.io.*
     - uri:
