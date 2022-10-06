@@ -33,23 +33,25 @@ spec:
     - uri:
         exact: /manifest.json:1
     - uri:
-        prefix: /rpc.gloo.solo.io.OverviewApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.DashboardApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.GraphApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.DebugApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.WorkspacesApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.RoutingApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.PoliciesApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.DestinationsApi
-    - uri:
-        prefix: /rpc.gloo.solo.io.GraphqlApi
+        regex: /rpc.gloo.solo.io.*
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.OverviewApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.DashboardApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.GraphApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.DebugApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.WorkspacesApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.RoutingApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.PoliciesApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.DestinationsApi
+    #- uri:
+    #    prefix: /rpc.gloo.solo.io.GraphqlApi
     - uri:
         prefix: /oidc-callback
     - uri:
