@@ -5,7 +5,7 @@ metadata:
   namespace: numaflow-config
 spec:
   hosts:
-    - 'numaflow.kapoozi.com'
+    - 'numaflow.kapoozi.com:443'
   virtualGateways:
     - name: cluster1-north-south-gw-443
       namespace: istio-gateways
