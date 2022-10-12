@@ -11,7 +11,6 @@ spec:
     tls:
       mode: SIMPLE
       secretName: tls-secret
-    httpsRedirect: true
   workloads:
   - selector:
       cluster: cluster1
