@@ -19,8 +19,8 @@ spec:
       forwardTo:
         destinations:
         - ref:
-            name: numaflow
-            namespace: numaflow
+            name: numaflow-server
+            namespace: numaflow-system
             cluster: cluster1
           port:
             number: 8443
