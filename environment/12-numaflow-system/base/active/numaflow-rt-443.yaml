@@ -23,4 +23,4 @@ spec:
             namespace: numaflow-system
             cluster: cluster1
           port:
-            number: 8443
+            number: 80
