@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - numaflow-config-ns.yaml
+- numaflow-rt-443.yaml
 - numaflow-workspace.yaml
 - numaflow-workspacesettings.yaml
 
