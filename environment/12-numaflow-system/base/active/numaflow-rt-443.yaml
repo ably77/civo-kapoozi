@@ -7,7 +7,7 @@ spec:
   hosts:
     - 'numaflow.kapoozi.com'
   virtualGateways:
-    - name: cluster1-north-south-gw-80
+    - name: cluster1-north-south-gw-443
       namespace: istio-gateways
       cluster: mgmt
   workloadSelectors: []
