@@ -24,4 +24,3 @@ spec:
             cluster: cluster1
           port:
             number: 8443
-            name: tcp
