@@ -13,9 +13,9 @@ spec:
   workloadSelectors: []
   http:
     - name: numaflow-server
-      matchers:
-      - uri:
-          prefix: /
+      #matchers:
+      #- uri:
+      #    prefix: /
       forwardTo:
         destinations:
         - ref:
@@ -23,4 +23,4 @@ spec:
             namespace: numaflow-system
             cluster: cluster1
           port:
-            number: 80
+            number: 8445
