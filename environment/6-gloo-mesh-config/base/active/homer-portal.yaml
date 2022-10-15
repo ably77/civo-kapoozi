@@ -295,7 +295,7 @@ spec:
                         url: "https://photoprism.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute 
                   - name: "Gloo Edge Applications"
-                    icon: "fas fa-gamepad"
+                    icon: "fas fa-cloud"
                     items:
                       - name: "Status Page"
                         icon: "fas fa-arrow-circle-up"
