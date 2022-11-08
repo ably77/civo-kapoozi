@@ -32,3 +32,21 @@ spec:
             cluster: cluster1
           port:
             number: 8000
+    - name: httpbin-v2-route
+      labels:
+        waf: "true"
+        ratelimited: "true"
+      matchers:
+      - uri:
+          prefix: /devteam/v2
+      - uri:
+          prefix: /
+      forwardTo:
+        pathRewrite: /
+        destinations:
+        - ref:
+            name: in-mesh
+            namespace: httpbin
+            cluster: cluster1
+          port:
+            number: 8000
