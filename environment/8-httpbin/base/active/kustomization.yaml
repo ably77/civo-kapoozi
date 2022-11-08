@@ -18,6 +18,7 @@ resources:
 - httpbin-ratelimitpolicy.yaml
 - httpbin-ratelimitserverconfig.yaml
 - httpbin-ratelimitserversettings.yaml
+- httpbin-rt-443-cluster1.yaml
 - httpbin-wafpolicy-log4shell.yaml
 - httpbin-workspace.yaml
 - httpbin-workspacesettings.yaml

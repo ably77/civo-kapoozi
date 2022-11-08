@@ -1,0 +1,34 @@
+apiVersion: networking.gloo.solo.io/v2
+kind: RouteTable
+metadata:
+  name: httpbin-rt-443-cluster1
+  namespace: httpbin
+  labels:
+    expose: "true"
+spec:
+  hosts:
+    - 'httpbin-cluster1.kapoozi.com'
+  virtualGateways:
+    - name: cluster1-north-south-gw-443
+      namespace: istio-gateways
+      cluster: mgmt
+  workloadSelectors: []
+  http:
+    - name: httpbin-v1-route
+      labels:
+        waf: "true"
+        ratelimited: "true"
+      matchers:
+      - uri:
+          prefix: /devteam/v1
+      - uri:
+          prefix: /
+      forwardTo:
+        pathRewrite: /
+        destinations:
+        - ref:
+            name: in-mesh
+            namespace: httpbin
+            cluster: cluster1
+          port:
+            number: 8000
