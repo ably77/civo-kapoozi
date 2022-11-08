@@ -50,13 +50,13 @@ spec:
             cluster: cluster1
           port:
             number: 8000
-    - name: httpbin-full-route
+    - name: httpbin-v3-route
       labels:
         waf: "true"
         ratelimited: "true"
       matchers:
       - uri:
-          prefix: /devteam/full
+          prefix: /devteam/v3
       - uri:
           prefix: /
       forwardTo:
