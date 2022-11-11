@@ -32,6 +32,7 @@ spec:
         ref:
           name: productpage
           namespace: bookinfo-frontends
+          cluster: cluster1
   - name: api-v1
     labels:
       waf: "true"
