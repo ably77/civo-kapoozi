@@ -32,7 +32,7 @@ spec:
           number: 9080
         ref:
           name: productpage-443
-          namespace: bookinfo-team-config
+          namespace: bookinfo-frontends
   - name: api-v1
     labels:
       waf: "true"

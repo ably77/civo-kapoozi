@@ -2,7 +2,7 @@ apiVersion: resilience.policy.gloo.solo.io/v2
 kind: OutlierDetectionPolicy
 metadata:
   name: outlier-detection
-  namespace: bookinfo-team-config
+  namespace: bookinfo-frontends
 spec:
   applyToDestinations:
   - kind: VIRTUAL_DESTINATION

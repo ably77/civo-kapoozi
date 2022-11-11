@@ -4,7 +4,7 @@ metadata:
   labels:
     failover: "true"
   name: productpage-443
-  namespace: bookinfo-team-config
+  namespace: bookinfo-frontends
 spec:
   hosts:
   - productpage-443.global
