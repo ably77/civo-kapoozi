@@ -22,4 +22,5 @@ resources:
 - grafana-rt-443.yaml
 - homer-portal.yaml
 - homer-rt-443.yaml
+- roottrustpolicy-secretref.yaml
 - uptime-cluster1-rt-443.yaml

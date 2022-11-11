@@ -3,5 +3,7 @@ kind: KubernetesCluster
 metadata:
   name: cluster1
   namespace: gloo-mesh
+  #labels:
+  #  roottrust: shared
 spec:
   clusterDomain: cluster.local
