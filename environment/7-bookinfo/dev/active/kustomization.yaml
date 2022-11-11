@@ -5,3 +5,9 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - ../../base/active/
+- bookinfo-failoverpolicy.yaml
+- bookinfo-outlierdetectionpolicy.yaml
+- productpage-virtualdestination-443.yaml
+
+patchesStrategicMerge:
+- patches/bookinfo-oauth-failover-rt-443.yaml
