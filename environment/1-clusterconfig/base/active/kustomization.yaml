@@ -28,6 +28,3 @@ resources:
 - supermario-ns.yaml
 - web-portal-ns.yaml
 
-commonLabels:
-  istio.io/rev: 1-13
-
