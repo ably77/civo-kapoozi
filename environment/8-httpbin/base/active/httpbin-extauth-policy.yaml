@@ -40,7 +40,7 @@ spec:
             headers:
               idTokenHeader: Jwt
               #idTokenHeader: x-id-token
-              #accessTokenHeader: x-access-token
+              accessTokenHeader: authorization
       - opaAuth:
           modules:
           - name: httpbin-opa
