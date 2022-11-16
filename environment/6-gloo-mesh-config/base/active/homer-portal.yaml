@@ -323,10 +323,10 @@ spec:
                         keywords: "bookinfo-edge"
                         url: "https://bookinfo-gke.kapoozi.com/productpage"
                         target: "_blank" # optional html a tag target attribute
-                      - name: "petstore-portal"
+                      - name: "solo-dev-portal"
                         icon: "fas fa-paw"
-                        tag: "petstore-portal"
-                        keywords: "petstore-portal"
+                        tag: "solo-dev-portal"
+                        keywords: "solo-dev-portal"
                         url: "https://portal-edge.kapoozi.com/"
                         target: "_blank" # optional html a tag target attribute
                   - name: "Games"
