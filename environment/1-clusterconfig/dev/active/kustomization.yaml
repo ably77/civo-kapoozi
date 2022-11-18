@@ -5,6 +5,3 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - ../../base/active/
-
-commonLabels:
-  istio.io/rev: 1-13
