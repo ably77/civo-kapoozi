@@ -1,0 +1,44 @@
+apiVersion: security.policy.gloo.solo.io/v2
+kind: ExtAuthPolicy
+metadata:
+  name: web-ui
+  namespace: web-ui
+spec:
+  applyToRoutes:
+  - route:
+      labels:
+        route_name: "frontend"
+  config:
+    server:
+      name: mgmt-ext-auth-server
+      namespace: gloo-mesh
+      cluster: mgmt
+    glooAuth:
+      configs:
+      - oauth2:
+          oidcAuthorizationCode:
+            appUrl: https://shop.kapoozi.com
+            callbackPath: /callback
+            clientId: 0oa5zlc69fbDNh2Hf5d7
+            clientSecretRef:
+              name: web-ui-okta-client-secret
+              namespace: web-ui
+            issuerUrl: https://dev-22653158.okta.com/oauth2/default
+            session:
+              failOnFetchFailure: true
+              redis:
+                cookieName: shop-session
+                options:
+                  host: redis.gloo-mesh-addons:6379
+                allowRefreshing: false
+              cookieOptions:
+                maxAge: "1800"
+            scopes:
+            - email
+            logoutPath: /logout
+            afterLogoutUrl: /
+            headers:
+              idTokenHeader: Jwt
+              #idTokenHeader: x-id-token
+              accessTokenHeader: authorization
+              useBearerSchemaForAuthorization: true
