@@ -10,7 +10,6 @@ resources:
 - failoverpolicy.yaml
 #- frontend-api-accesspolicy.yaml
 #- in-namespace-accesspolicy.yaml
-- kustomization.yaml
 - outlierdetectionpolicy.yaml
 - vd.yaml
 - web-team-workspace.yaml
