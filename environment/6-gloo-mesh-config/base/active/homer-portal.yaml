@@ -217,6 +217,12 @@ spec:
                         keywords: "uptime"
                         url: "https://uptime-cluster1.kapoozi.com/status/webapps"
                         target: "_blank" # optional html a tag target attribute
+                      - name: "Online Boutique"
+                        #subtitle: "onlineboutique"
+                        icon: "fas fa-shopping-cart"
+                        tag: "onlineboutique"
+                        url: "https://shop.kapoozi.com"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "httpbin"
                         #subtitle: "httpbin"
                         icon: "far fa-window-maximize"
