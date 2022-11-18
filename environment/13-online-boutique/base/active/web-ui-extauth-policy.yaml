@@ -36,7 +36,7 @@ spec:
             scopes:
             - email
             logoutPath: /logout
-            afterLogoutUrl: https://shop.kapoozi.com/
+            afterLogoutUrl: https://google.com
             headers:
               idTokenHeader: Jwt
               #idTokenHeader: x-id-token
