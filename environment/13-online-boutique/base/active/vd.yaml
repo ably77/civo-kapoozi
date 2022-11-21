@@ -5,7 +5,7 @@ metadata:
   namespace: web-ui
 spec:
   hosts:
-  - frontend.web-ui-team.solo-io.mesh
+  - frontend-vd.mesh
   services:
   - labels:
       app: frontend
@@ -22,7 +22,7 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - checkout.backend-apis-team.solo-io.mesh
+  - checkout-vd.mesh
   services:
   - labels:
       app: checkoutservice
@@ -39,7 +39,7 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - currency.backend-apis-team.solo-io.mesh
+  - currency-vd.mesh
   services:
   - labels:
       app: currencyservice
@@ -56,7 +56,7 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - product-catalog.backend-apis-team.solo-io.mesh
+  - product-catalog-vd.mesh
   services:
   - labels:
       app: productcatalogservice
@@ -73,7 +73,7 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - shipping.backend-apis-team.solo-io.mesh
+  - shipping-vd.mesh
   services:
   - labels:
       app: shippingservice
@@ -90,7 +90,7 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - cart.backend-apis-team.solo-io.mesh
+  - cart-vd.mesh
   services:
   - labels:
       app: cartservice
@@ -107,7 +107,7 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - ads.backend-apis-team.solo-io.mesh
+  - ads-vd.mesh
   services:
   - labels:
       app: adservice
@@ -124,7 +124,7 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - recommendations.backend-apis-team.solo-io.mesh
+  - recommendations-vd.mesh
   services:
   - labels:
       app: recommendationservice
