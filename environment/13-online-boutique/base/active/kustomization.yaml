@@ -10,6 +10,7 @@ resources:
 - failoverpolicy.yaml
 #- frontend-api-accesspolicy.yaml
 #- in-namespace-accesspolicy.yaml
+- frontend-mirrorpolicy.yaml
 - outlierdetectionpolicy.yaml
 - vd.yaml
 - web-team-workspace.yaml
@@ -18,5 +19,6 @@ resources:
 - web-ui-ns.yaml
 #- web-ui-okta-client-secret.yaml
 - web-ui-rt-443.yaml
+- web-ui-v2.yaml
 - web-ui.yaml
 

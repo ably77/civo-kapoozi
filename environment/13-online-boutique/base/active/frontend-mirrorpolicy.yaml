@@ -1,0 +1,19 @@
+apiVersion: trafficcontrol.policy.gloo.solo.io/v2
+kind: MirrorPolicy
+metadata:
+  name: onlineboutique-mirror-policy
+  namespace: web-ui
+spec:
+  applyToRoutes:
+  - route:
+      labels:
+        route_name: frontend
+  config:
+    destination:
+      port:
+        number: 80
+      ref:
+        cluster: mgmt
+        name: frontend-v2
+        namespace: web-ui
+    percentage: 100
