@@ -72,13 +72,6 @@ data:
         path: /var/lib/grafana/dashboards/istio-services
       orgId: 1
       type: file
-    - disableDeletion: false
-      folder: default
-      name: default
-      options:
-        path: /var/lib/grafana/dashboards/default
-      orgId: 1
-      type: file
 ---
 # Source: grafana/templates/service.yaml
 apiVersion: v1
@@ -211,9 +204,7 @@ spec:
         - name: config
           configMap:
             name: grafana
-        - name: additional
-          configMap:
-            name: kapoozi-dashboards
+          
         - name: dashboards-istio
           configMap:
             name: istio-grafana-dashboards
