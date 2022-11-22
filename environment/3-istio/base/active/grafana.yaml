@@ -204,7 +204,9 @@ spec:
         - name: config
           configMap:
             name: grafana
-          
+        - name: additional-dashboards
+          configMap:
+            name: kapoozi-dashboards
         - name: dashboards-istio
           configMap:
             name: istio-grafana-dashboards
