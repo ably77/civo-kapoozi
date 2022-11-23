@@ -9,7 +9,16 @@ spec:
   hosts:
   - 'grafana.kapoozi.com'
   http:
-  - forwardTo:
+  - name: grafana-ui
+    labels:
+      waf: "true"
+      oauth: "true"
+    matchers:
+      - uri:
+          prefix: /grafana
+      - uri:
+          prefix: /callback
+    forwardTo:
       destinations:
       - port:
           number: 3000
@@ -17,15 +26,23 @@ spec:
           cluster: mgmt
           name: grafana
           namespace: istio-system
+  - name: grafana-ui-cluster1
     labels:
       waf: "true"
-      oauth: "true"
-    name: grafana-ui
+      #oauth: "true"
     matchers:
       - uri:
-          prefix: /grafana
+          prefix: /cluster1
       - uri:
           prefix: /callback
+    forwardTo:
+      destinations:
+      - port:
+          number: 80
+        ref:
+          cluster: cluster1
+          name: prometheus-helm-grafana
+          namespace: prometheus
   virtualGateways:
   - cluster: mgmt
     name: mgmt-north-south-gw-443

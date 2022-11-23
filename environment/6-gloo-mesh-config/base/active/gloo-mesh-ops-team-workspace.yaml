@@ -20,3 +20,4 @@ spec:
     namespaces:
     - name: istio-gateways
     - name: gloo-mesh-addons
+    - name: prometheus
