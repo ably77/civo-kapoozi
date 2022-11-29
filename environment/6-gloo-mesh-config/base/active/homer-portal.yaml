@@ -195,11 +195,17 @@ spec:
                         tag: "gmui"
                         url: "https://gmui.kapoozi.com/gmui"
                         target: "_blank" # optional html a tag target attribute
-                      - name: "Grafana"
+                      - name: "Grafana - mgmt"
                         #subtitle: "Another application"
                         icon: "fas fa-chart-area"
-                        tag: "grafana"
+                        tag: "grafana-mgmt"
                         url: "https://grafana.kapoozi.com/grafana"
+                        target: "_blank" # optional html a tag target attribute
+                      - name: "Grafana - cluster1"
+                        #subtitle: "Another application"
+                        icon: "fas fa-chart-area"
+                        tag: "grafana-cluster1"
+                        url: "https://grafana.kapoozi.com/cluster1"
                         target: "_blank" # optional html a tag target attribute
                       - name: "uptime-dashboard"
                         #subtitle: "Another application"
