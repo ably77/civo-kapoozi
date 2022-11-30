@@ -10,7 +10,6 @@ spec:
   - 'gmui.kapoozi.com'
   http:
   - name: gloo-mesh-ui-main
-    labels:
     matchers:
     - uri:
         prefix: /welcome
@@ -23,7 +22,7 @@ spec:
     - uri:
         prefix: /policies
     - uri:
-        regex: /static*
+        prefix: /static
     - uri:
         prefix: /workspace
     - uri:
