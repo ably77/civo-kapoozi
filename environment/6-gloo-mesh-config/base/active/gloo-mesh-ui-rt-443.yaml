@@ -23,7 +23,7 @@ spec:
     - uri:
         prefix: /policies
     - uri:
-        prefix: /static
+        regex: /static*
     - uri:
         prefix: /workspace
     - uri:
