@@ -207,6 +207,12 @@ spec:
                       #  tag: "grafana-cluster1"
                       #  url: "https://grafana.kapoozi.com/cluster1"
                       #  target: "_blank" # optional html a tag target attribute
+                      - name: "Longhorn UI"
+                        #subtitle: "longhorn dashboard"
+                        icon: "fas fa-hdd"
+                        tag: "longhorn"
+                        url: "https://storage.kapoozi.com/#/dashboard"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "uptime-dashboard"
                         #subtitle: "Another application"
                         icon: "fas fa-heartbeat"
