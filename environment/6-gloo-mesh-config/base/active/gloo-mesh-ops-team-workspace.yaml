@@ -21,3 +21,4 @@ spec:
     - name: istio-gateways
     - name: gloo-mesh-addons
     - name: prometheus
+    - name: longhorn-system

@@ -1,0 +1,31 @@
+apiVersion: networking.gloo.solo.io/v2
+kind: RouteTable
+metadata:
+  name: longhorn-ui-443
+  namespace: ops-team-config
+spec:
+  hosts:
+  - 'storage.kapoozi.com'
+  http:
+  - name: longhorn-ui-mgmt
+    labels:
+      waf: "true"
+      route_name: "longhorn-ui-mgmt"
+    matchers:
+      - uri:
+          prefix: /
+      - uri:
+          prefix: /callback
+    forwardTo:
+      destinations:
+      - port:
+          number: 8000
+        ref:
+          cluster: mgmt
+          name: longhorn-frontend
+          namespace: longhorn-system
+  virtualGateways:
+  - cluster: mgmt
+    name: mgmt-north-south-gw-443
+    namespace: istio-gateways
+  workloadSelectors: []
