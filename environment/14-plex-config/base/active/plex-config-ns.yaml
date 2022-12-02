@@ -1,0 +1,9 @@
+# Part of the Quick Start Setup
+#
+# https://github.com/numaproj/numaflow/blob/main/docs/quick-start.md
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: plex-config
+  #labels:
+  #  istio.io/rev: 1-13

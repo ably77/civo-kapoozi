@@ -1,0 +1,13 @@
+apiVersion: admin.gloo.solo.io/v2
+kind: Workspace
+metadata:
+  name: plex
+  namespace: gloo-mesh
+spec:
+  workloadClusters:
+  - name: 'mgmt'
+    namespaces:
+    - name: plex-config
+  - name: '*'
+    namespaces:
+    - name: plex
