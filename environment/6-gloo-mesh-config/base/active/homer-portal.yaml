@@ -361,7 +361,22 @@ spec:
                         tag: "supermario"
                         keywords: "supermario"
                         url: "https://supermario.kapoozi.com"
-                        target: "_blank" # optional html a tag target attribute          
+                        target: "_blank" # optional html a tag target attribute 
+                  - name: "Entertainment"
+                    icon: "fas fa-photo-video"
+                    items:
+                      - name: "Status Page"
+                        icon: "fas fa-arrow-circle-up"
+                        tag: "status"
+                        keywords: "status"
+                        url: "https://uptime-cluster1.kapoozi.com/status/entertainment"
+                        target: "_blank" # optional html a tag target attribute   
+                      - name: "Plex"
+                        icon: "fas fa-play"
+                        tag: "plex"
+                        keywords: "plex"
+                        url: "https://watch.kapoozi.com"
+                        target: "_blank" # optional html a tag target attribute            
   syncPolicy:
     automated:
       prune: true
