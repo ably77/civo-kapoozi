@@ -25,6 +25,8 @@ kind: Deployment
 metadata:
   name: in-mesh
   namespace: httpbin
+  labels: 
+    version: v1
 spec:
   replicas: 1
   selector:
