@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "wave description:"
-echo "collaboration tools"
+echo "collaboration tools app config"
