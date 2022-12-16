@@ -13,6 +13,7 @@ resources:
 - ghost-admin-delegate-rt.yaml
 - ghost-main-delegate-rt.yaml
 - ghost-root-rt.yaml
+- homer-rt-443.yaml
 - ghost-ratelimit-transformationfilter.yaml
 - ghost-ratelimitclientconfig.yaml
 - ghost-ratelimitpolicy.yaml

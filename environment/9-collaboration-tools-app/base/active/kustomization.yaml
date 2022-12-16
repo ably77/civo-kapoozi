@@ -8,5 +8,6 @@ resources:
 - etherdraw.yaml
 - etherpad.yaml
 - ghost-blog.yaml
+- homer-portal.yaml
 - plants-blog.yaml
 
