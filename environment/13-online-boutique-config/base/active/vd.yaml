@@ -41,7 +41,8 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - currency-vd.mesh
+  #- currency-vd.mesh
+  - currency.backend-apis-team.solo-io.mesh
   services:
   - labels:
       app: currencyservice
@@ -58,7 +59,8 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - product-catalog-vd.mesh
+  #- product-catalog-vd.mesh
+  - product-catalog.backend-apis-team.solo-io.mesh
   services:
   - labels:
       app: productcatalogservice
