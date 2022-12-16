@@ -4,7 +4,4 @@ kind: Kustomization
 
 # list of resources to be Applied
 resources:
-- games-workspace.yaml
-- games-workspacesettings.yaml
-- supermario-rt-443.yaml
 - supermario.yaml

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "wave description:"
-echo "solo wallet"
+echo "deploying games app config"
