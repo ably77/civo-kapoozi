@@ -4,9 +4,7 @@ kind: Kustomization
 
 # list of resources to be Applied
 resources:
-- bookinfo-backends-dyaml.yaml
 - bookinfo-extauth-policy.yaml
-- bookinfo-frontends-dyaml.yaml
 - bookinfo-oauth-rt-443.yaml
 - bookinfo-ratelimit-transformationfilter.yaml
 - bookinfo-ratelimitclientconfig.yaml
