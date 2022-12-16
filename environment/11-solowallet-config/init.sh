@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "wave description:"
-echo "solo wallet"
+echo "deploy solo wallet config"
