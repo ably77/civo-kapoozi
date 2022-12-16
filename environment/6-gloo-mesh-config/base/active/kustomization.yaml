@@ -20,8 +20,6 @@ resources:
 - gloo-mesh-ui-rt-443.yaml
 - grafana-extauth-policy.yaml
 - grafana-rt-443.yaml
-- homer-portal.yaml
-- homer-rt-443.yaml
 - longhorn-extauth-policy.yaml
 - longhorn-rt-443.yaml
 - roottrustpolicy-secretref.yaml
