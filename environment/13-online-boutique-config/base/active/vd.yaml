@@ -5,7 +5,8 @@ metadata:
   namespace: web-ui
 spec:
   hosts:
-  - frontend-vd.mesh
+  #- frontend-vd.mesh
+  - frontend.web-ui-team.solo-io.mesh
   services:
   - labels:
       app: frontend
@@ -22,7 +23,8 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - checkout-vd.mesh
+  #- checkout-vd.mesh
+  - checkout.backend-apis-team.solo-io.mesh
   services:
   - labels:
       app: checkoutservice
