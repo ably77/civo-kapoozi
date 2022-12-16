@@ -75,7 +75,8 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - shipping-vd.mesh
+  #- shipping-vd.mesh
+  - shipping.backend-apis-team.solo-io.mesh
   services:
   - labels:
       app: shippingservice
