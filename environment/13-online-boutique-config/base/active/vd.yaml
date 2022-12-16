@@ -113,7 +113,8 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - ads-vd.mesh
+  #- ads-vd.mesh
+  - ads.backend-apis-team.solo-io.mesh
   services:
   - labels:
       app: adservice
@@ -130,7 +131,8 @@ metadata:
   namespace: backend-apis
 spec:
   hosts:
-  - recommendations-vd.mesh
+  #- recommendations-vd.mesh
+  - recommendations.backend-apis-team.solo-io.mesh
   services:
   - labels:
       app: recommendationservice
