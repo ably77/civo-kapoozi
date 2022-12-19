@@ -7,7 +7,7 @@ spec:
   hosts:
     - 'bank.kapoozi.com'
   virtualGateways:
-    - name: mgmt-north-south-gw-443
+    - name: cluster2-north-south-gw-443
       namespace: istio-gateways
       cluster: mgmt
   workloadSelectors: []
@@ -48,7 +48,6 @@ spec:
         - ref:
             name: frontend
             namespace: bank-demo
-            cluster: cluster2
           port:
             number: 443
       labels:
