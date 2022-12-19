@@ -262,12 +262,12 @@ spec:
                         keywords: "bookinfo-loadgen"
                         url: "https://bookinfo.kapoozi.com/plow"
                         target: "_blank" # optional html a tag target attribute
-                      #- name: "Solo Wallet"
-                      #  #subtitle: "solowallet"
-                      #  icon: "fas fa-wallet"
-                      #  tag: "solowallet"
-                      #  url: "https://bank.kapoozi.com"
-                      #  target: "_blank" # optional html a tag target attribute
+                      - name: "Solo Wallet"
+                        #subtitle: "solowallet"
+                        icon: "fas fa-wallet"
+                        tag: "solowallet"
+                        url: "https://bank.kapoozi.com"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "ghost-blog"
                         #subtitle: "ghost-blog"
                         icon: "fas fa-ghost"
