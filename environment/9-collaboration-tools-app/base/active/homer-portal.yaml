@@ -189,6 +189,13 @@ spec:
                         keywords: "argocd"
                         url: "https://argocd-cluster1.kapoozi.com/argo"
                         target: "_blank" # optional html a tag target attribute
+                      - name: "ArgoCD - cluster2"
+                        #subtitle: "GitOps Tooling"
+                        icon: "fab fa-git-alt"
+                        tag: "argo"
+                        keywords: "argocd"
+                        url: "https://argocd-cluster2.kapoozi.com/argo"
+                        target: "_blank" # optional html a tag target attribute
                       - name: "Gloo Mesh UI"
                         #subtitle: "Another application"
                         icon: "fab fa-earlybirds"
