@@ -9,7 +9,6 @@ resources:
 #- 1-13-glcm-ns-cluster2.yaml
 - 1-13-ilcm-cluster2.yaml
 - new-glcm-ns-cluster2.yaml
-- istio-ingressgateway-svc.yaml
 #- glcm-ew-cluster2.yaml
 #- glcm-ns-cluster2.yaml
 #- ilcm-cluster2.yaml
