@@ -1,0 +1,28 @@
+apiVersion: admin.gloo.solo.io/v2
+kind: GatewayLifecycleManager
+metadata:
+  name: 1-13-ingress-cluster2
+  namespace: gloo-mesh
+  annotations:
+    argocd.argoproj.io/sync-wave: "-7"
+spec:
+  installations:
+    - clusters:
+      - name: cluster2
+        activeGateway: true
+      gatewayRevision: 1-13
+      istioOperatorSpec:
+        profile: empty
+        hub: us-docker.pkg.dev/gloo-mesh/istio-workshops
+        tag: 1.13.7-solo
+        values:
+          gateways:
+            istio-ingressgateway:
+              customService: true
+        components:
+          ingressGateways:
+            - name: istio-ingressgateway
+              namespace: istio-gateways
+              enabled: true
+              label:
+                istio: ingressgateway
