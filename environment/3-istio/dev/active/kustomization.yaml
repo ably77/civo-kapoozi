@@ -5,7 +5,7 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - ../../base/active/
-#- 1-13-glcm-ew-cluster2.yaml
+- 1-13-glcm-ew-cluster2.yaml
 - 1-13-glcm-ns-cluster2.yaml
 - 1-13-ilcm-cluster2.yaml
 #- glcm-ew-cluster2.yaml
