@@ -7,17 +7,16 @@ spec:
   workloadClusters:
   - name: mgmt
     namespaces:
-    - name: argocd
     - name: gloo-mesh
     - name: istio-system
     - name: web-portal
     - name: ops-team-config
   - name: cluster1
     namespaces:
-    - name: argocd
     - name: uptime
   - name: '*'
     namespaces:
+    - name: argocd
     - name: istio-gateways
     - name: gloo-mesh-addons
     - name: prometheus
