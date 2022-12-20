@@ -13,7 +13,7 @@ spec:
       clusters:
       - name: cluster2
         # If set to true, the spec for this revision is applied in the cluster
-        activeGateway: true
+        activeGateway: false
       istioOperatorSpec:
         # No control plane components are installed
         profile: empty
