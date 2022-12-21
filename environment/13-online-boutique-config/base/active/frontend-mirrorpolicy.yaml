@@ -16,4 +16,4 @@ spec:
         cluster: mgmt
         name: frontend-v2
         namespace: web-ui
-    percentage: 100
+    percentage: 0
