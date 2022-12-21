@@ -5,6 +5,7 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - httpbin-extauth-policy.yaml
+- httpbin-headermanipulation.yaml
 - httpbin-jwt-transformationpolicy.yaml
 - httpbin-jwtpolicy.yaml
 - httpbin-oauth-rt-443.yaml

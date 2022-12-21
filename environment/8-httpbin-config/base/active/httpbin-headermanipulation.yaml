@@ -1,0 +1,19 @@
+apiVersion: trafficcontrol.policy.gloo.solo.io/v2
+kind: HeaderManipulationPolicy
+metadata:
+  name: modify-header-httpbin
+  namespace: httpbin
+spec:
+  applyToRoutes:
+  - route:
+      name: httpbin-protected
+  config:
+    appendRequestHeaders:
+      x-custom-request: httpbin
+    #appendResponseHeaders:
+    #  x-custom-response: httpbin
+    #removeRequestHeaders:
+    #- user-agent
+    #removeResponseHeaders:
+    #- x-server
+    #- x-envoy-upstream-service-time
