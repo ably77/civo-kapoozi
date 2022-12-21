@@ -31,3 +31,20 @@ spec:
             kind: VIRTUAL_DESTINATION
             port:
               number: 80
+    - name: frontend-v2
+      labels:
+        virtual-destination: frontend-v2
+        route_name: frontend-v2
+      matchers:
+      - uri:
+          prefix: /
+        headers:
+        - name: user
+          value: v2
+      forwardTo:
+        destinations:
+        - ref:
+            name: frontend-v2
+            namespace: web-ui
+          port:
+            number: 80
