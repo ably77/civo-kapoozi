@@ -288,6 +288,12 @@ spec:
                         tag: "plants-blog"
                         url: "https://plants.kapoozi.com"
                         target: "_blank" # optional html a tag target attribute
+                      - name: "podinfo app"
+                        #subtitle: "podinfo"
+                        icon: "fa-info-circle"
+                        tag: "podinfo"
+                        url: "https://podinfo.kapoozi.com"
+                        target: "_blank" # optional html a tag target attribute
                   
                   - name: "Collaboration Tools"
                     icon: "fas fa-users"
