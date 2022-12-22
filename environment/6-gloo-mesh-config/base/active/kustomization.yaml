@@ -24,5 +24,6 @@ resources:
 - grafana-rt-443.yaml
 - longhorn-extauth-policy.yaml
 - longhorn-rt-443.yaml
+- okta-client-secret.yaml
 - roottrustpolicy-secretref.yaml
 - uptime-cluster1-rt-443.yaml
