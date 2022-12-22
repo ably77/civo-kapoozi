@@ -39,7 +39,7 @@ spec:
       ratelimited: "true"
     matchers:
     - uri:
-        prefix: /api/v1/products
+        exact: /api/v1/products
     forwardTo:
       destinations:
       - port:
@@ -47,6 +47,24 @@ spec:
         ref:
           name: productpage
           namespace: bookinfo-frontends
+  - name: api-v1-product1
+    labels:
+      waf: "true"
+      ratelimited: "true"
+    matchers:
+    - uri:
+        exact: /api/v1/products/1
+      headers:
+        - name: end-user
+          value: beta
+    forwardTo:
+      destinations:
+      - port:
+          number: 9080
+        ref:
+          name: productpage
+          namespace: bookinfo-frontends
+          cluster: cluster2
   - name: plow-productpage-rewrite
     labels:
       waf: "true"
