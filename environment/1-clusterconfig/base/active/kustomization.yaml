@@ -5,22 +5,17 @@ kind: Kustomization
 # list of resources to be Applied
 resources:
 - argocd-ns.yaml
-- argocd-okta-client-secret.yaml
 - bank-demo-jwt-secret.yaml
 - bank-demo-ns.yaml
 - bookinfo-backends-ns.yaml
 - bookinfo-frontends-ns.yaml
 - collaboration-tools-ns.yaml
 - ghost-blog-pvc.yaml
-- ghost-okta-client-secret.yaml
 - gloo-mesh-addons-ns.yaml
 - gloo-mesh-ns.yaml
 - gloo-mesh-relay-identity-token-secret.yaml
 - gloo-mesh-relay-root-ca.yaml
-- grafana-okta-client-secret.yaml
-- homer-okta-client-secret.yaml
 - httpbin-ns.yaml
-- httpbin-okta-client-secret.yaml
 - istio-gateways-ns.yaml
 - istio-system-ns.yaml
 - ops-team-config-ns.yaml

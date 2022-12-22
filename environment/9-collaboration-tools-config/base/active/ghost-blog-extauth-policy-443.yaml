@@ -21,8 +21,8 @@ spec:
             callbackPath: /callback
             clientId: 0oa5zlc69fbDNh2Hf5d7
             clientSecretRef:
-              name: ghost-okta-client-secret
-              namespace: collaboration-tools
+              name: okta-client-secret
+              namespace: gloo-mesh
             issuerUrl: https://dev-22653158.okta.com/oauth2/default
             session:
               failOnFetchFailure: true
