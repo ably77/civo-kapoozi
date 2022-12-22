@@ -1,0 +1,26 @@
+apiVersion: networking.gloo.solo.io/v2
+kind: RouteTable
+metadata:
+  name: podinfo-rt-443
+  namespace: podinfo-config
+spec:
+  hosts:
+    - 'podinfo.kapoozi.com'
+  virtualGateways:
+    - name: cluster2-north-south-gw-443
+      namespace: istio-gateways
+      cluster: mgmt
+  workloadSelectors: []
+  http:
+    - name: podinfo-server
+      matchers:
+      - uri:
+          prefix: /
+      forwardTo:
+        destinations:
+        - ref:
+            name: podinfo
+            namespace: podinfo
+            cluster: cluster2
+          port:
+            number: 8000

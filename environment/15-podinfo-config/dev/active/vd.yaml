@@ -1,0 +1,16 @@
+apiVersion: networking.gloo.solo.io/v2
+kind: VirtualDestination
+metadata:
+  name: plex-vd
+  namespace: plex-config
+spec:
+  hosts:
+  - plex-vd.mesh
+  services:
+  - labels:
+      app.kubernetes.io/name: plex
+  ports:
+  - number: 32400
+    protocol: HTTP
+    targetPort:
+      name: http
