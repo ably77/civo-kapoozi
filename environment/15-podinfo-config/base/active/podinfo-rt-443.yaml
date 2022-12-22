@@ -24,8 +24,6 @@ spec:
           prefix: /status
       - uri:
           prefix: /version
-      - uri:
-          exact: /swagger.json
       forwardTo:
         destinations:
         - ref:
@@ -35,22 +33,28 @@ spec:
           port:
             number: 9898
     - name: podinfo-preferred
+      labels:
+        route_name: podinfo-preferred
       matchers:
       - uri:
           exact: /headers
-        headers:
-        - name: end-user
-          value: admin
       - uri:
           exact: /metrics
         headers:
         - name: end-user
-          value: admin
+          value: preferred
       - uri:
           exact: /env
         headers:
         - name: end-user
-          value: admin
+          value: preferred
+      - uri:
+          exact: /swagger.json
+        headers:
+        - name: end-user
+          value: preferred
+      - uri:
+          prefix: /callback
       forwardTo:
         destinations:
         - ref:

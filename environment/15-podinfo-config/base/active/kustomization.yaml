@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - podinfo-config-ns.yaml
+- podinfo-extauth-policy.yaml
 - podinfo-rt-443.yaml
 - podinfo-workspace.yaml
 - podinfo-workspacesettings.yaml
