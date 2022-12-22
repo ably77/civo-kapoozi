@@ -19,7 +19,6 @@ resources:
 - istio-gateways-ns.yaml
 - istio-system-ns.yaml
 - ops-team-config-ns.yaml
-- ops-team-okta-client-secret.yaml
 - supermario-ns.yaml
 - web-portal-ns.yaml
 
