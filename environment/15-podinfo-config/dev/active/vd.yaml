@@ -8,7 +8,7 @@ spec:
   - podinfo-vd.mesh
   services:
   - labels:
-      app.kubernetes.io/name: podinfo
+      app: podinfo
   ports:
   - number: 9898
     protocol: HTTP
