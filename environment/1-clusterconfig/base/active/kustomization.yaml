@@ -10,7 +10,6 @@ resources:
 - bank-demo-ns.yaml
 - bookinfo-backends-ns.yaml
 - bookinfo-frontends-ns.yaml
-- bookinfo-okta-client-secret.yaml
 - collaboration-tools-ns.yaml
 - ghost-blog-pvc.yaml
 - ghost-okta-client-secret.yaml
