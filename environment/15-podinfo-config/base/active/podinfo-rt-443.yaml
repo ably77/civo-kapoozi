@@ -7,8 +7,7 @@ spec:
   hosts:
     - 'podinfo.kapoozi.com'
   virtualGateways:
-    - #name: mgmt-north-south-gw-443
-      name: cluster2-north-south-gw-443
+    - name: mgmt-north-south-gw-443
       namespace: istio-gateways
       cluster: mgmt
   workloadSelectors: []
