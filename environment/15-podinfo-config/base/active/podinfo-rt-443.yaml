@@ -24,8 +24,6 @@ spec:
           prefix: /status
       - uri:
           prefix: /version
-      - uri:
-          exact: /metrics
       forwardTo:
         destinations:
         - ref:
@@ -40,6 +38,11 @@ spec:
       matchers:
       - uri:
           exact: /headers
+      - uri:
+          exact: /metrics
+        headers:
+        - name: end-user
+          value: preferred
       - uri:
           exact: /env
         headers:
