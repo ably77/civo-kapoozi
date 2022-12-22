@@ -12,10 +12,45 @@ spec:
       cluster: mgmt
   workloadSelectors: []
   http:
-    - name: podinfo-server
+    - name: podinfo-main
       matchers:
       - uri:
-          prefix: /
+          exact: /
+      - uri:
+          exact: /api/info
+      - uri:
+          prefix: /delay
+      - uri:
+          prefix: /status
+      - uri:
+          prefix: /version
+      - uri:
+          exact: /swagger.json
+      forwardTo:
+        destinations:
+        - ref:
+            name: podinfo
+            namespace: podinfo
+            cluster: cluster2
+          port:
+            number: 9898
+    - name: podinfo-preferred
+      matchers:
+      - uri:
+          exact: /headers
+        headers:
+        - name: end-user
+          value: admin
+      - uri:
+          exact: /metrics
+        headers:
+        - name: end-user
+          value: admin
+      - uri:
+          exact: /env
+        headers:
+        - name: end-user
+          value: admin
       forwardTo:
         destinations:
         - ref:
