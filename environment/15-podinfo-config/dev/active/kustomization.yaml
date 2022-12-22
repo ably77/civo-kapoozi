@@ -8,4 +8,4 @@ resources:
 - vd.yaml
 
 patchesStrategicMerge:
-- patch/plex-rt-443.yaml
+- patch/podinfo-rt-443.yaml

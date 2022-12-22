@@ -1,0 +1,65 @@
+apiVersion: networking.gloo.solo.io/v2
+kind: RouteTable
+metadata:
+  name: podinfo-rt-443
+  namespace: podinfo-config
+spec:
+  hosts:
+    - 'podinfo.kapoozi.com'
+  virtualGateways:
+    - name: mgmt-north-south-gw-443
+      namespace: istio-gateways
+      cluster: mgmt
+  workloadSelectors: []
+  http:
+    - name: podinfo-main
+      matchers:
+      - uri:
+          exact: /
+      - uri:
+          exact: /api/info
+      - uri:
+          prefix: /delay
+      - uri:
+          prefix: /status
+      - uri:
+          prefix: /version
+      forwardTo:
+        destinations:
+          - ref:
+              name: podinfo-vd
+              namespace: podinfo-config
+            kind: VIRTUAL_DESTINATION
+            port:
+              number: 9898
+    - name: podinfo-preferred
+      labels:
+        route_name: podinfo-preferred
+      matchers:
+      - uri:
+          exact: /headers
+      - uri:
+          exact: /metrics
+        headers:
+        - name: end-user
+          value: preferred
+      - uri:
+          exact: /env
+        headers:
+        - name: end-user
+          value: preferred
+      - uri:
+          exact: /swagger.json
+        headers:
+        - name: end-user
+          value: preferred
+      - uri:
+          prefix: /callback
+      forwardTo:
+        destinations:
+          - ref:
+              name: podinfo-vd
+              namespace: podinfo-config
+            kind: VIRTUAL_DESTINATION
+            port:
+              number: 9898
