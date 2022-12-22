@@ -55,7 +55,7 @@ spec:
         exact: /api/v1/products/1
       headers:
         - name: end-user
-          value: jason
+          value: beta
     forwardTo:
       destinations:
       - port:
@@ -63,6 +63,7 @@ spec:
         ref:
           name: productpage
           namespace: bookinfo-frontends
+          cluster: cluster2
   - name: plow-productpage-rewrite
     labels:
       waf: "true"
