@@ -1,0 +1,9 @@
+apiVersion: admin.gloo.solo.io/v2
+kind: WorkspaceSettings
+metadata:
+  name: podinfo-workspacesettings
+  namespace: podinfo-config
+spec:
+  options:
+    federation:                     # enable service federation of the web-ui namespace
+      enabled: false

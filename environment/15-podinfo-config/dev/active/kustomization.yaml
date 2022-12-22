@@ -9,3 +9,4 @@ resources:
 
 patchesStrategicMerge:
 - patch/podinfo-rt-443.yaml
+- patch/podinfo-workspacesettings-fed.yaml
