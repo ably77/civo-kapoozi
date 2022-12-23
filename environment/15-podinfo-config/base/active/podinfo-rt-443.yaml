@@ -38,6 +38,9 @@ spec:
       matchers:
       - uri:
           exact: /headers
+        headers:
+        - name: end-user
+          value: preferred
       - uri:
           exact: /metrics
         headers:
