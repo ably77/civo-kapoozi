@@ -64,7 +64,7 @@ spec:
         ref:
           name: productpage
           namespace: bookinfo-frontends
-          cluster: cluster2
+          cluster: cluster1
   - name: plow-productpage-rewrite
     labels:
       waf: "true"

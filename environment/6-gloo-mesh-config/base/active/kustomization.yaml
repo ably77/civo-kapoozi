@@ -11,7 +11,8 @@ resources:
 - gloo-mesh-cluster1-kubernetescluster.yaml
 - gloo-mesh-cluster1-virtualgateway-443.yaml
 - gloo-mesh-cluster1-virtualgateway-80.yaml
-- gloo-mesh-cluster2-virtualgateway-443.yaml
+#- gloo-mesh-cluster2-kubernetescluster.yaml
+#- gloo-mesh-cluster2-virtualgateway-443.yaml
 - gloo-mesh-global-workspacesettings.yaml
 - gloo-mesh-mgmt-extauth-server.yaml
 - gloo-mesh-mgmt-kubernetescluster.yaml
