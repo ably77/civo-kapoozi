@@ -58,6 +58,8 @@ spec:
           value: preferred
       - uri:
           prefix: /callback
+      - uri:
+          prefix: /logout
       forwardTo:
         destinations:
         - ref:
