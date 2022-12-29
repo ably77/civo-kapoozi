@@ -5,6 +5,6 @@ resources:
 - backend-apis-ns.yaml
 - backend-apis.yaml
 - web-ui-ns.yaml
-- web-ui-v2.yaml
+#- web-ui-v2.yaml
 - web-ui.yaml
 
