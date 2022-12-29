@@ -8,7 +8,7 @@ resources:
 - failoverpolicy.yaml
 #- frontend-api-accesspolicy.yaml
 #- in-namespace-accesspolicy.yaml
-- frontend-mirrorpolicy.yaml
+#- frontend-mirrorpolicy.yaml
 - outlierdetectionpolicy.yaml
 #- plow-loadgen-argo.yaml
 - vd.yaml
